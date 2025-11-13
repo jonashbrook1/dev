@@ -34,7 +34,7 @@
     document.getElementById('signupForm').addEventListener('submit', async (e)=>{
       e.preventDefault();
       const email = document.getElementById('email').value;
-      const res = await fetch("YOUR_GOOGLE_SCRIPT_URL", {
+      const res = await fetch("https://script.google.com/macros/s/AKfycbzmmqbODnGL4Hjkdp2NOGAecE1EnYnomLuUPKM50CcIW7SXi8S4ePASEgbiPO0c74HNTA/exec", {
         method:"POST",
         mode:"no-cors",
         body: JSON.stringify({ email })
