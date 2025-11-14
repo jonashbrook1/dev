@@ -33,18 +33,24 @@
     
     /* Disco Cow Brand Typography */
     h1.disco-title {
-      font-family: 'Playfair Display', serif;
-      font-weight: 900;
-      color: #2325ff;
-      font-size: 72px;
-      font-style: normal ;
+      font-family: 'Playfair Display', serif !important;
+      font-weight: 700 !important;
+      color: #2325ff !important;
+      font-size: 72px !important;
+      font-style: normal !important;
     }
     
     h2.disco-subtitle,
     .disco-tagline {
-      font-family: 'Inter', sans-serif;
-      font-weight: 700;
-      color: #2325ff;
+      font-family: 'Inter', sans-serif !important;
+      font-weight: 700 !important;
+      color: #2325ff !important;
+      font-style: normal !important;
+    }
+    
+    /* Override template's italic styling for h1 in home section */
+    #fh5co-home .flexslider .fh5co-text h1 {
+      font-style: normal !important;
     }
     
     .fh5co-hero-text {
@@ -115,7 +121,22 @@
     
     #fh5co-featured-menu,
     #fh5co-menu {
-      background-color: #eeebe3;
+      background-color: #eeebe3 !important;
+    }
+    
+    /* Ensure text is visible in all sections */
+    #fh5co-featured-menu h2,
+    #fh5co-featured-menu h3,
+    #fh5co-featured-menu p,
+    #fh5co-menu h2,
+    #fh5co-menu h3,
+    #fh5co-menu p,
+    #fh5co-menu .fh5co-food-desc {
+      color: #000 !important;
+    }
+    
+    #fh5co-menu .fh5co-food-menu h2 {
+      color: #2325ff !important;
     }
     
     .btn-primary {
@@ -174,7 +195,7 @@
           <a href="#" data-nav-section="features">Products</a>
         </div>
         <div class="fh5co-logo">
-          <a href="index.html"><img src="images/Disco_Cow_Logo.png" alt="Disco Cow"></a>
+          <a href="index.html"><img src="images/__Disco Cow Logo.png__" alt="Disco Cow"></a>
         </div>
         <div class="fh5co-menu-2">
           <a href="#" data-nav-section="menu">Our Story</a>
