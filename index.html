@@ -11,6 +11,7 @@
 
   <link rel="shortcut icon" href="favicon.ico">
   <link href='https://fonts.googleapis.com/css?family=Playfair+Display:400,700,400italic,700italic|Merriweather:300,400italic,300italic,400,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap' rel='stylesheet'>
 
   <!-- CSS -->
   <link rel="stylesheet" href="css/animate.css">
@@ -25,17 +26,50 @@
   <script src="js/modernizr-2.6.2.min.js"></script>
   
   <style>
+    /* Brand Colors */
+    body {
+      background-color: #eeebe3;
+    }
+    
+    /* Disco Cow Brand Typography */
+    h1.disco-title {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      color: #2325ff;
+      font-size: 72px;
+    }
+    
+    h2.disco-subtitle,
+    .disco-tagline {
+      font-family: 'Inter', sans-serif;
+      font-weight: 700;
+      color: #2325ff;
+    }
+    
     .fh5co-hero-text {
       color: #fff;
       text-align: center;
       padding: 40px 20px;
     }
+    
     .disco-tagline {
       font-size: 24px;
-      font-style: italic;
       margin-top: 20px;
-      opacity: 0.9;
+      opacity: 1;
     }
+    
+    /* Logo Styling */
+    .fh5co-logo img {
+      height: 60px;
+      width: auto;
+      display: block;
+    }
+    
+    .fh5co-logo a {
+      display: inline-block;
+      line-height: 60px;
+    }
+    
     .product-card {
       background: #fff;
       padding: 30px;
@@ -43,22 +77,64 @@
       border-radius: 8px;
       box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     }
+    
     .product-card h3 {
       margin-top: 0;
-      color: #333;
+      color: #2325ff;
+      font-family: 'Inter', sans-serif;
+      font-weight: 700;
     }
+    
+    .heading {
+      color: #2325ff;
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+    }
+    
+    .sub-heading {
+      font-family: 'Inter', sans-serif;
+      font-weight: 700;
+      color: #2325ff;
+    }
+    
     .social-prompt {
-      background: #f8f9fa;
+      background: #eeebe3;
       padding: 15px;
       border-radius: 5px;
       margin-bottom: 15px;
       font-size: 14px;
     }
+    
     .instagram-handle-format {
       font-style: italic;
       color: #666;
       font-size: 12px;
       margin-top: 5px;
+    }
+    
+    #fh5co-featured-menu,
+    #fh5co-menu {
+      background-color: #eeebe3;
+    }
+    
+    .btn-primary {
+      background-color: #2325ff;
+      border-color: #2325ff;
+    }
+    
+    .btn-primary:hover {
+      background-color: #1a1dcc;
+      border-color: #1a1dcc;
+    }
+    
+    .btn-outline {
+      color: #2325ff;
+      border-color: #2325ff;
+    }
+    
+    .btn-outline:hover {
+      background-color: #2325ff;
+      color: #fff;
     }
   </style>
 </head>
@@ -73,8 +149,8 @@
       <div class="fh5co-text">
         <div class="container">
           <div class="row">
-            <h1 class="to-animate">Disco Cow</h1>
-            <h2 class="to-animate">Whipped Cottage Cheese Dips, Spreads, and Sauces</h2>
+            <h1 class="to-animate disco-title">Disco Cow</h1>
+            <h2 class="to-animate disco-subtitle">Whipped Cottage Cheese Dips, Spreads, and Sauces</h2>
             <p class="to-animate disco-tagline">No Curds at this Party!</p>
           </div>
         </div>
@@ -97,7 +173,7 @@
           <a href="#" data-nav-section="features">Products</a>
         </div>
         <div class="fh5co-logo">
-          <a href="index.html">Disco Cow</a>
+          <a href="index.html"><img src="images/Disco_Cow_Logo.png" alt="Disco Cow"></a>
         </div>
         <div class="fh5co-menu-2">
           <a href="#" data-nav-section="menu">Our Story</a>
@@ -120,7 +196,7 @@
   </div>
 
   <!-- Products Section -->
-  <div id="fh5co-featured-menu" data-section="features">
+  <div id="fh5co-featured-menu" data-section="features" style="padding: 80px 0;">
     <div class="container">
       <div class="row text-center fh5co-heading row-padded">
         <div class="col-md-8 col-md-offset-2">
@@ -162,7 +238,7 @@
   </div>
 
   <!-- Our Story Section -->
-  <div id="fh5co-menu" data-section="menu">
+  <div id="fh5co-menu" data-section="menu" style="padding: 80px 0;">
     <div class="container">
       <div class="row text-center fh5co-heading row-padded">
         <div class="col-md-8 col-md-offset-2">
