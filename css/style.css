@@ -1355,3 +1355,19 @@ p {
 }
 
 /*# sourceMappingURL=style.css.map */
+
+
+/* Make all FlexSlider slides visible */
+.flexslider .slides li,
+.flexslider .slides li.clone {
+    display: block !important;
+    opacity: 1 !important;
+    z-index: auto !important;
+}
+
+/* Optional: reset transition effects */
+.flexslider .slides li {
+    transition: none !important;
+    -webkit-transition: none !important;
+}
+
