@@ -608,7 +608,7 @@ p {
 
 #fh5co-featured {
   padding: 7em 0;
-  background: #130d08 url(../images/wood_1.png) repeat;
+  background: #f9f9f9;
 }
 @media screen and (max-width: 768px) {
   #fh5co-featured {
@@ -618,7 +618,7 @@ p {
 #fh5co-featured .fh5co-heading .heading {
   position: relative;
   padding-top: 30px !important;
-  color: #fff;
+  color: #000;
 }
 #fh5co-featured .fh5co-heading .heading:before, #fh5co-featured .fh5co-heading .heading::before {
   height: 64px;
@@ -1361,8 +1361,8 @@ co-v-half > .fh5co-h-row-2 {
   color: rgba(255, 255, 255, 0.7);
 }
 
-.js .to-animate, .js
-.to-animate-2 {
+/* Animation classes - removed opacity:0 to ensure content is visible */
+.js .to-animate, .js .to-animate-2 {
   opacity: 1;
 }
 
