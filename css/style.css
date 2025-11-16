@@ -72,9 +72,10 @@ p {
 }
 
 .product-image {
-  max-width: 50px;
-  height: auto;
-  display: inline-block;
+    max-width: 60%; /* adjust smaller or larger */
+    height: auto;
+    display: block;
+    margin: 0 auto; /* keeps it centered */
 }
 
 .product-card h3 {
