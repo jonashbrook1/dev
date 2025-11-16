@@ -74,17 +74,19 @@ p {
 
 .product-image-wrapper {
   margin-bottom: 20px;
-  height: 200px;
+  max-height: 250px; 
+  overflow: hidden; 
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .product-image {
-    max-width: 60%; /* adjust smaller or larger */
-    height: auto;
+    max-width: 100%;
+    height: auto; 
     display: block;
-    margin: 0 auto; /* keeps it centered */
+    margin: 0 auto; 
+    object-fit: contain; 
 }
 
 .product-card h3 {
