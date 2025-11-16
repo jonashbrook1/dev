@@ -439,9 +439,16 @@ p {
   font-style: italic;
 }
 .fh5co-main-nav .fh5co-logo a {
+  padding: 10px 10px;   /* Adjust as needed */
   position: relative;
   top: -5px;
   display: inline-block;
+}
+.fh5co-main-nav .fh5co-logo img {
+  max-height: 35px;     /* Adjust this value for ideal size */
+  height: auto;
+  width: auto;
+  display: block;
 }
 .fh5co-main-nav .fh5co-menu-2 {
   text-align: left;
@@ -1473,9 +1480,4 @@ co-v-half > .fh5co-h-row-2 {
 #fh5co-featured .fh5co-grid > .fh5
 
 
-.fh5co-logo img {
-  max-height: 60px; /* adjust size as needed */
-  height: auto;
-  width: auto;
-  display: block;
-}
+
