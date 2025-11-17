@@ -172,7 +172,8 @@ p {
   max-width: 75px;
   width: 100%;
   height: auto;
-  margin: 0 auto 20px;
+  margin: 0 auto 20px auto;
+  display: block;
 }
 
 #fh5co-home .flexslider .fh5co-text h1 {
