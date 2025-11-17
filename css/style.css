@@ -59,11 +59,11 @@ p {
 
 /* SECTION LOGO STYLING */
 .section-logo {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .section-logo img {
-  max-height: 60px;
+  max-height: 45px;
   height: auto;
   width: auto;
   margin: 0 auto;
@@ -71,11 +71,11 @@ p {
 }
 
 .section-logo-white {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .section-logo-white img {
-  max-height: 60px;
+  max-height: 45px;
   height: auto;
   width: auto;
   margin: 0 auto;
@@ -94,6 +94,35 @@ p {
 
 /* Event title specific styling */
 #fh5co-events .fh5co-event h3.event-title {
+  font-family: "League Spartan", sans-serif !important;
+  font-style: normal;
+}
+
+/* Additional font overrides for buttons and specific elements */
+.btn.btn-primary,
+.btn.btn-outline,
+.btn-primary.btn-outline,
+input.btn.btn-primary,
+a.btn.btn-primary,
+a.btn.btn-outline {
+  font-family: "League Spartan", sans-serif !important;
+}
+
+/* Product names */
+.product-card h3,
+h3.product-name {
+  font-family: "League Spartan", sans-serif !important;
+}
+
+/* Section subheadings */
+h3.section-subheading,
+#fh5co-contact h3 {
+  font-family: "League Spartan", sans-serif !important;
+  font-style: normal;
+}
+
+/* Event section titles */
+#fh5co-events .fh5co-event h3 {
   font-family: "League Spartan", sans-serif !important;
   font-style: normal;
 }
@@ -140,7 +169,8 @@ p {
   color: #16178f;
   font-size: 28px;
   margin-bottom: 15px;
-  font-style: italic;
+  font-style: normal;
+  font-family: "League Spartan", sans-serif !important;
 }
 
 .product-card p {
@@ -606,6 +636,8 @@ p {
 #fh5co-events .fh5co-event h3 {
   padding: 0;
   margin: 0;
+  font-family: "League Spartan", sans-serif !important;
+  font-style: normal;
 }
 
 #fh5co-events .fh5co-event .fh5co-event-meta {
@@ -655,7 +687,8 @@ p {
 
 #fh5co-contact h3 {
   margin-bottom: 30px;
-  font-style: italic;
+  font-style: normal;
+  font-family: "League Spartan", sans-serif !important;
 }
 
 #fh5co-contact .fh5co-heading .heading {
