@@ -163,17 +163,22 @@ p {
   width: 100%;
   top: 50%;
   transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
   text-align: center;
   margin-top: 0 !important;
 }
 
 /* FOR DC_LOGO_1.png */
 #fh5co-home .flexslider .fh5co-text img {
-  max-width: 75px;
-  width: 100%;
-  height: auto;
-  margin: 250px auto auto;
-  display: block;
+  max-width: 250px !important;
+  width: 250px !important;
+  height: auto !important;
+  margin: 0 auto 30px auto !important;
+  display: block !important;
+  position: relative !important;
+  z-index: 10 !important;
+  opacity: 1 !important;
+  visibility: visible !important;
 }
 /* HERO LOGO FIX */
 .hero-logo {
@@ -221,14 +226,18 @@ p {
   font-size: 40px;
   letter-spacing: 2px;
   color: #fff;
-  -webkit-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s;
+  position: relative;
+  z-index: 10;
 }
 
 @media screen and (max-width: 768px) {
   #fh5co-home .flexslider .fh5co-text h2 {
     font-size: 20px;
+  }
+  
+  #fh5co-home .flexslider .fh5co-text img {
+    max-width: 180px !important;
+    width: 180px !important;
   }
 }
 
