@@ -365,41 +365,23 @@ p {
   }
 }
 
-/* UPDATED ABOUT SECTION - WHITE BACKGROUND, BLACK TEXT */
+/* UPDATED ABOUT SECTION - WHITE BACKGROUND, BLACK TEXT, CENTERED */
 #fh5co-about {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -moz-flex-wrap: wrap;
-  background: #e6e6e6;
+  background: #fff;
   width: 100%;
+  padding: 7em 0;
 }
 
-#fh5co-about .fh5co-2col {
-  width: 50%;
-}
-
-@media screen and (max-width: 1200px) {
-  #fh5co-about .fh5co-2col {
-    width: 100%;
+@media screen and (max-width: 768px) {
+  #fh5co-about {
+    padding: 5em 0;
   }
 }
 
 /* UPDATED - WHITE BACKGROUND */
 #fh5co-about .fh5co-text {
-  padding: 2em 6em;
-  text-align: left;
+  text-align: center;
   background: #fff;
-}
-
-@media screen and (max-width: 1200px) {
-  #fh5co-about .fh5co-text {
-    padding: 1em;
-  }
 }
 
 #fh5co-about .fh5co-text .btn {
@@ -449,25 +431,6 @@ p {
   font-family: "Playfair Display", serif;
 }
 
-#fh5co-about .fh5co-bg {
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-@media screen and (max-width: 1200px) {
-  #fh5co-about .fh5co-bg {
-    width: 100%;
-    min-height: 500px;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  #fh5co-about .fh5co-bg {
-    width: 100%;
-    min-height: 300px;
-  }
-}
-
 /* REMOVED #fh5co-sayings SECTION */
 
 #fh5co-featured {
@@ -505,12 +468,13 @@ p {
 
 /* REMOVED #fh5co-menus SECTION */
 
-/* UPDATED EVENTS SECTION - NEW ICON */
+/* UPDATED EVENTS SECTION - FIXED BACKGROUND */
 #fh5co-events {
   padding: 7em 0;
   background-color: transparent;
   background-size: cover;
   background-attachment: fixed;
+  background-position: center center;
   position: relative;
 }
 
@@ -865,10 +829,10 @@ p {
 #fh5co-offcanvas a:hover, #fh5co-offcanvas a:focus, #fh5co-offcanvas a:active {
   outline: none;
   text-decoration: none;
-  color: #fb6e14;
+  color: #141492;
 }
 #fh5co-offcanvas a.active {
-  color: #fb6e14;
+  color: #141492;
 }
 @media screen and (max-width: 768px) {
   #fh5co-offcanvas {
@@ -917,7 +881,7 @@ p {
   text-decoration: none;
 }
 .fh5co-nav-toggle.active i::before, .fh5co-nav-toggle.active i::after {
-  background: #fff;
+  background: #141492;
 }
 .fh5co-nav-toggle:hover, .fh5co-nav-toggle:focus, .fh5co-nav-toggle:active {
   outline: none;
@@ -931,18 +895,18 @@ p {
   *display: inline;
   width: 30px;
   height: 2px;
-  color: #fff;
+  color: #141492;
   font: bold 14px/.4 Helvetica;
   text-transform: uppercase;
   text-indent: -55px;
-  background: #fff;
+  background: #141492;
   transition: all .2s ease-out;
 }
 .fh5co-nav-toggle i::before, .fh5co-nav-toggle i::after {
   content: '';
   width: 30px;
   height: 2px;
-  background: #fff;
+  background: #141492;
   position: absolute;
   left: 0;
   -webkit-transition: 0.2s;
@@ -991,28 +955,3 @@ p {
 .fh5co-nav-toggle {
   position: fixed;
   top: 20px;
-  left: 20px;
-  z-index: 9999;
-  display: block;
-  margin: 0 auto;
-  display: none;
-  border-bottom: none !important;
-  background: rgba(0, 0, 0, 0.7);
-  padding: 0px 10px 10px 10px;
-  cursor: pointer;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  -ms-border-radius: 4px;
-  border-radius: 4px;
-}
-@media screen and (max-width: 768px) {
-  .fh5co-nav-toggle {
-    display: block;
-  }
-}
-
-
-
-
-
-
