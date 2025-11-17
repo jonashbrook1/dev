@@ -33,74 +33,18 @@
 
 	<script src="js/modernizr-2.6.2.min.js"></script>
 	<style>
-        /* Mobile Menu Override Styles - Complete Reset and Override */
-        /* First, reset ALL offcanvas styles */
+        /* Simple Mobile Menu Color Overrides */
         #fh5co-offcanvas {
-            /* Reset positioning */
-            display: block !important;
-            position: fixed !important;
-            top: 0 !important;
-            bottom: auto !important;
-            left: auto !important;
-            right: 0 !important;
-            
-            /* Dimensions and appearance */
-            width: 275px !important;
-            height: 100% !important;
             background: #f8f3cd !important;
-            background-color: #f8f3cd !important;
-            background-image: none !important;
-            padding: 50px 40px 40px 40px !important;
-            overflow-y: auto !important;
-            z-index: 1001 !important;
-            box-shadow: -5px 0 15px rgba(0,0,0,0.1) !important;
-            
-            /* Slide from right - hidden state */
-            -moz-transform: translateX(275px) !important;
-            -webkit-transform: translateX(275px) !important;
-            -ms-transform: translateX(275px) !important;
-            -o-transform: translateX(275px) !important;
-            transform: translateX(275px) !important;
-            
-            /* Transition */
-            -webkit-transition: transform 0.5s ease !important;
-            -o-transition: transform 0.5s ease !important;
-            transition: transform 0.5s ease !important;
-        }
-        
-        /* When menu is visible - slide in from right */
-        .offcanvas-visible #fh5co-offcanvas,
-        body.offcanvas-visible #fh5co-offcanvas {
-            -moz-transform: translateX(0) !important;
-            -webkit-transform: translateX(0) !important;
-            -ms-transform: translateX(0) !important;
-            -o-transform: translateX(0) !important;
-            transform: translateX(0) !important;
         }
         
         #fh5co-offcanvas a {
             color: #666 !important;
-            display: block !important;
-            margin-bottom: 20px !important;
-            font-size: 18px !important;
-            font-weight: 400 !important;
-            text-decoration: none !important;
-            text-align: left !important;
-            padding: 7px 0 !important;
-            -webkit-transition: 0.3s !important;
-            -o-transition: 0.3s !important;
-            transition: 0.3s !important;
         }
         
         #fh5co-offcanvas a:hover,
         #fh5co-offcanvas a:focus,
         #fh5co-offcanvas a:active {
-            color: #16178f !important;
-            text-decoration: none !important;
-            outline: none !important;
-        }
-        
-        #fh5co-offcanvas a.active {
             color: #16178f !important;
         }
 
