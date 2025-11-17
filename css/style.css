@@ -960,11 +960,11 @@ h3.section-subheading,
 
 #fh5co-offcanvas a {
   display: block;
-  color: rgba(255, 255, 255, 0.4);
+  color: $f8f3cd;
   text-align: center;
   padding: 7px 0;
 }
-
+        
 #fh5co-offcanvas a:hover, #fh5co-offcanvas a:focus, #fh5co-offcanvas a:active {
   outline: none;
   text-decoration: none;
