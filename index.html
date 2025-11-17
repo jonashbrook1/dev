@@ -72,6 +72,8 @@
             flex-direction: column;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
             animation: slideIn 0.3s ease;
+            /* Apply League Spartan font to modal content */
+            font-family: 'League Spartan', sans-serif; 
         }
 
         @keyframes slideIn {
@@ -215,7 +217,9 @@
 
 		<a href="#" class="fh5co-nav-toggle js-fh5co-nav-toggle"><i></i></a>
 
-		<div id="fh5co-offcanvas">
+		<!-- Updated: Added inline background color for the mobile menu (#f8f3cd) -->
+		<!-- Updated: Removed duplicate 'Home' link -->
+		<div id="fh5co-offcanvas" style="background-color: #f8f3cd;">
 			<a href="#" data-nav-section="home">Home</a>
 			<a href="#" data-nav-section="about">About</a>
 			<a href="#" data-nav-section="features">Products</a>
@@ -257,8 +261,9 @@
 						</ul>
 						<div style="margin-top: 30px;">
 							<p><strong>Connect with us:</strong></p>
-							<p>TikTok: @itsdiscocow</p>
-							<p>Instagram: @itsdiscocow</p>
+							<!-- Updated: Added hyperlinks to social media handles -->
+							<p>TikTok: <a href="https://www.tiktok.com/@itsdiscocow" target="_blank">@itsdiscocow</a></p>
+							<p>Instagram: <a href="https://www.instagram.com/itsdiscocow" target="_blank">@itsdiscocow</a></p>
 							<p>Email: <a href="mailto:eat.disco.cow@gmail.com">eat.disco.cow@gmail.com</a></p>
 						</div>
 					</div>
@@ -661,11 +666,16 @@
 	</script>
 	
 	<script>
+    let scrollPos = 0;
+
 	// Function to open modal
     function openModal(modalId) {
         const modal = document.getElementById(modalId);
         if (!modal) return;
         
+        // Save current scroll position before opening
+        scrollPos = window.scrollY;
+
         // Use 'active' class to show, consistent with template CSS
         modal.classList.add('active');
         document.body.style.overflow = 'hidden'; // Prevent background scrolling
@@ -686,6 +696,9 @@
         modal.classList.remove('active');
         document.body.style.overflow = ''; // Restore scrolling
         modal.onclick = null; // Remove the click listener on close
+        
+        // Restore previous scroll position to prevent jumping to top
+        window.scrollTo(0, scrollPos);
     }
 	
 	// Close with Escape key for any open modal
@@ -703,6 +716,28 @@
         modals.forEach(modal => {
             modal.classList.remove('active');
         });
+        
+        // Mobile Menu Auto-Close on Link Click
+        // The mobile menu uses the class .fh5co-nav-toggle to hide/show the menu
+        const offcanvas = document.getElementById('fh5co-offcanvas');
+        const navToggle = document.querySelector('.js-fh5co-nav-toggle');
+        
+        if (offcanvas && navToggle) {
+            // Find all section links inside the offcanvas menu
+            const offcanvasLinks = offcanvas.querySelectorAll('a[data-nav-section]');
+            
+            offcanvasLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    // Check if the link target is valid before closing
+                    // This uses the existing toggle mechanism implemented in main.js, which usually toggles a class on body
+                    if (navToggle.classList.contains('active')) {
+                        navToggle.click(); // Programmatically click the toggle to slide it out/close it
+                    }
+                    // Prevent the default jump behavior if needed, but the template already handles this with scroll-to
+                    // e.preventDefault(); 
+                });
+            });
+        }
     });
 	</script>
 		
