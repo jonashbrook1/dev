@@ -11,6 +11,12 @@ body {
 body.fh5co-overflow {
   overflow-x: auto;
 }
+
+/* PREVENT BODY OVERFLOW WHEN MENU IS OPEN */
+body.offcanvas-visible {
+  overflow-x: hidden;
+}
+
 a {
   color: #16178f;
   -webkit-transition: 0.5s;
@@ -49,6 +55,41 @@ p {
   height: auto;
   width: auto;
   display: block;
+}
+
+/* SECTION LOGO STYLING */
+.section-logo {
+  margin-bottom: 30px;
+}
+
+.section-logo img {
+  max-height: 64px;
+  height: auto;
+  width: auto;
+  margin: 0 auto;
+  display: block;
+}
+
+.section-logo-white {
+  margin-bottom: 30px;
+}
+
+.section-logo-white img {
+  max-height: 64px;
+  height: auto;
+  width: auto;
+  margin: 0 auto;
+  display: block;
+  filter: brightness(0) invert(1);
+}
+
+/* FONT UPDATES FOR SPECIFIC ELEMENTS */
+.section-subheading,
+.product-name,
+.event-title,
+.btn-submit,
+.btn-follow {
+  font-family: "League Spartan", sans-serif !important;
 }
 
 /* UPDATED PRODUCT CARDS - FIXED SIZING */
@@ -487,18 +528,6 @@ p {
   color: #000;
 }
 
-#fh5co-featured .fh5co-heading .heading:before, #fh5co-featured .fh5co-heading .heading::before {
-  height: 64px;
-  width: 64px;
-  position: absolute;
-  content: "";
-  background: url(../images/DC_LOGO_4.png) no-repeat;
-  top: 0;
-  left: 50%;
-  margin-top: -50px;
-  margin-left: -32px;
-}
-
 #fh5co-featured .fh5co-heading .sub-heading {
   color: #a99c92;
 }
@@ -530,23 +559,8 @@ p {
 
 #fh5co-events .fh5co-heading .heading {
   position: relative;
-  padding-top: 80px !important;
+  padding-top: 30px !important;
   color: #fff;
-}
-
-/* UPDATED - DC_LOGO_6.png */
-#fh5co-events .fh5co-heading .heading:before, #fh5co-events .fh5co-heading .heading::before {
-  height: 64px;
-  width: auto;
-  max-width: 200px;
-  position: absolute;
-  content: "";
-  background: url(../images/DC_LOGO_6.png) no-repeat center;
-  background-size: contain;
-  top: 0;
-  left: 50%;
-  margin-top: -50px;
-  transform: translateX(-50%);
 }
 
 #fh5co-events .fh5co-heading .sub-heading {
@@ -621,7 +635,7 @@ p {
   margin-bottom: 0;
 }
 
-/* UPDATED CONTACT SECTION - WHITE BACKGROUND, NEW ICON */
+/* UPDATED CONTACT SECTION - WHITE BACKGROUND */
 #fh5co-contact {
   padding: 7em 0;
   background: #fff;
@@ -640,22 +654,7 @@ p {
 
 #fh5co-contact .fh5co-heading .heading {
   position: relative;
-  padding-top: 80px !important;
-}
-
-/* UPDATED - DC_LOGO_4.png */
-#fh5co-contact .fh5co-heading .heading:before, #fh5co-contact .fh5co-heading .heading::before {
-  height: 64px;
-  width: auto;
-  max-width: 200px;
-  position: absolute;
-  content: "";
-  background: url(../images/DC_LOGO_4.png) no-repeat center;
-  background-size: contain;
-  top: 0;
-  left: 50%;
-  margin-top: -50px;
-  transform: translateX(-50%);
+  padding-top: 30px !important;
 }
 
 #fh5co-contact .fh5co-heading .sub-heading {
@@ -837,7 +836,7 @@ p {
   left: 0;
   overflow-y: auto;
   position: fixed;
-  z-index: 1;
+  z-index: 1001;
   top: 0;
   width: 275px;
   background: rgba(0, 0, 0, 0.9);
@@ -847,9 +846,9 @@ p {
   -ms-transform: translateX(-275px);
   -o-transform: translateX(-275px);
   transform: translateX(-275px);
-  -webkit-transition: 0.9s;
-  -o-transition: 0.9s;
-  transition: 0.9s;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
 }
 
 #fh5co-offcanvas a {
@@ -917,6 +916,26 @@ p {
 .fh5co-nav-toggle {
   cursor: pointer;
   text-decoration: none;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 9999;
+  display: none;
+  margin: 0 auto;
+  border-bottom: none !important;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 10px;
+  cursor: pointer;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  border-radius: 4px;
+}
+
+@media screen and (max-width: 768px) {
+  .fh5co-nav-toggle {
+    display: block;
+  }
 }
 
 .fh5co-nav-toggle.active i::before, .fh5co-nav-toggle.active i::after {
@@ -993,7 +1012,3 @@ p {
   -o-transform: rotateZ(-45deg);
   transform: rotateZ(-45deg);
 }
-
-.fh5co-nav-toggle {
-  position: fixed;
-  top: 20px;
