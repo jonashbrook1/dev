@@ -33,6 +33,45 @@
 
 	<script src="js/modernizr-2.6.2.min.js"></script>
 	<style>
+        /* Mobile Menu Override Styles */
+        #fh5co-offcanvas {
+            background-color: #f8f3cd !important;
+            position: fixed;
+            top: 0;
+            right: -275px;
+            width: 275px;
+            height: 100%;
+            padding: 50px 40px 40px 40px;
+            overflow-y: auto;
+            z-index: 1001;
+            -webkit-transition: 0.5s;
+            -o-transition: 0.5s;
+            transition: 0.5s;
+        }
+        
+        #fh5co-offcanvas.offcanvas-visible {
+            right: 0;
+        }
+        
+        #fh5co-offcanvas a {
+            color: #666 !important;
+            display: block;
+            margin-bottom: 20px;
+            font-size: 18px;
+            font-weight: 400;
+            text-decoration: none;
+            -webkit-transition: 0.3s;
+            -o-transition: 0.3s;
+            transition: 0.3s;
+        }
+        
+        #fh5co-offcanvas a:hover,
+        #fh5co-offcanvas a:focus {
+            color: #16178f !important;
+            text-decoration: none;
+            outline: none;
+        }
+
         /* Modal Styles */
         .modal {
             display: none;
@@ -228,8 +267,8 @@
 
 		<a href="#" class="fh5co-nav-toggle js-fh5co-nav-toggle"><i></i></a>
 
-		<!-- Updated mobile menu with corrected order and no duplicate -->
-		<div id="fh5co-offcanvas" style="background-color: #f8f3cd;">
+		<!-- Updated mobile menu with corrected order and styling -->
+		<div id="fh5co-offcanvas">
 			<a href="#" data-nav-section="reservation">Waitlist</a>
 			<a href="#" data-nav-section="about">About Us</a>
 			<a href="#" data-nav-section="features">Products</a>
