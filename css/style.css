@@ -175,6 +175,24 @@ p {
   margin: 250px auto auto;
   display: block;
 }
+/* HERO LOGO FIX */
+.hero-logo {
+	position: relative !important;
+	z-index: 10 !important;
+	opacity: 1 !important;
+	visibility: visible !important;
+}
+
+#fh5co-home .fh5co-text img {
+	max-width: 250px !important;
+	width: 250px !important;
+	height: auto !important;
+	margin: 0 auto 30px auto !important;
+	display: block !important;
+	position: relative !important;
+	z-index: 10 !important;
+	opacity: 1 !important;
+}
 
 #fh5co-home .flexslider .fh5co-text h1 {
   margin: 0;
