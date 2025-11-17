@@ -147,6 +147,16 @@ p {
   margin-bottom: 0;
 }
 
+#fh5co-home .fh5co-text {
+  position: absolute;
+  z-index: 3;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+  margin-top: 0 !important;
+}
+
 #fh5co-home .flexslider .fh5co-text {
   position: absolute;
   z-index: 3;
@@ -154,6 +164,7 @@ p {
   top: 50%;
   transform: translateY(-50%);
   text-align: center;
+  margin-top: 0 !important;
 }
 
 /* FOR DC_LOGO_1.png */
