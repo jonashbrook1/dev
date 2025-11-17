@@ -768,12 +768,26 @@ p {
 
 #fh5co-footer {
   width: 100%;
-  background: rgba(0, 0, 0, 0.9);
+  background: url(../images/res_image_11.png) no-repeat center center;
+  background-size: cover;
   padding: 7em 0;
   z-index: 1;
   font-size: 14px;
   line-height: 1.5;
   color: rgba(255, 255, 255, 0.5);
+  position: relative;
+}
+
+/* Optional: Add overlay to footer for better text readability */
+#fh5co-footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: -1;
 }
 
 @media screen and (max-width: 768px) {
