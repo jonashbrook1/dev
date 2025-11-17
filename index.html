@@ -33,43 +33,69 @@
 
 	<script src="js/modernizr-2.6.2.min.js"></script>
 	<style>
-        /* Mobile Menu Override Styles */
+        /* Mobile Menu Override Styles - Complete Override */
+        /* Override all original offcanvas styles */
         #fh5co-offcanvas {
+            display: block !important;
+            background: #f8f3cd !important;
             background-color: #f8f3cd !important;
-            position: fixed;
-            top: 0;
-            right: -275px;
-            width: 275px;
-            height: 100%;
-            padding: 50px 40px 40px 40px;
-            overflow-y: auto;
-            z-index: 1001;
-            -webkit-transition: 0.5s;
-            -o-transition: 0.5s;
-            transition: 0.5s;
+            background-image: none !important;
+            position: fixed !important;
+            top: 0 !important;
+            right: auto !important;
+            left: 0 !important;
+            width: 275px !important;
+            height: 100% !important;
+            padding: 50px 40px 40px 40px !important;
+            overflow-y: auto !important;
+            z-index: 1001 !important;
+            box-shadow: 5px 0 5px rgba(0,0,0,0.1) !important;
+            -moz-transform: translateX(-275px) !important;
+            -webkit-transform: translateX(-275px) !important;
+            -ms-transform: translateX(-275px) !important;
+            -o-transform: translateX(-275px) !important;
+            transform: translateX(-275px) !important;
+            -webkit-transition: 0.5s !important;
+            -o-transition: 0.5s !important;
+            transition: 0.5s !important;
         }
         
-        #fh5co-offcanvas.offcanvas-visible {
-            right: 0;
+        .offcanvas-visible #fh5co-offcanvas {
+            -moz-transform: translateX(0px) !important;
+            -webkit-transform: translateX(0px) !important;
+            -ms-transform: translateX(0px) !important;
+            -o-transform: translateX(0px) !important;
+            transform: translateX(0px) !important;
+        }
+        
+        body.fh5co-offcanvas-visible #fh5co-offcanvas {
+            right: 0 !important;
         }
         
         #fh5co-offcanvas a {
             color: #666 !important;
-            display: block;
-            margin-bottom: 20px;
-            font-size: 18px;
-            font-weight: 400;
-            text-decoration: none;
-            -webkit-transition: 0.3s;
-            -o-transition: 0.3s;
-            transition: 0.3s;
+            display: block !important;
+            margin-bottom: 20px !important;
+            font-size: 18px !important;
+            font-weight: 400 !important;
+            text-decoration: none !important;
+            text-align: left !important;
+            padding: 7px 0 !important;
+            -webkit-transition: 0.3s !important;
+            -o-transition: 0.3s !important;
+            transition: 0.3s !important;
         }
         
         #fh5co-offcanvas a:hover,
-        #fh5co-offcanvas a:focus {
+        #fh5co-offcanvas a:focus,
+        #fh5co-offcanvas a:active {
             color: #16178f !important;
-            text-decoration: none;
-            outline: none;
+            text-decoration: none !important;
+            outline: none !important;
+        }
+        
+        #fh5co-offcanvas a.active {
+            color: #16178f !important;
         }
 
         /* Modal Styles */
@@ -312,7 +338,7 @@
 							<!-- Updated: Added hyperlinks to social media handles -->
 							<p>TikTok: <a href="https://www.tiktok.com/@itsdiscocow" target="_blank">@itsdiscocow</a></p>
 							<p>Instagram: <a href="https://www.instagram.com/itsdiscocow" target="_blank">@itsdiscocow</a></p>
-							<p>Email: <a href="mailto:eat.disco.cow@gmail.com">eat.disco.cow@gmail.com</a></p>
+							<p>Email: <a href="/cdn-cgi/l/email-protection#d3b6b2a7fdb7baa0b0bcfdb0bca493b4beb2babffdb0bcbe"><span class="__cf_email__" data-cfemail="c1a4a0b5efa5a8b2a2aeefa2aeb681a6aca0a8adefa2aeac">[email&#160;protected]</span></a></p>
 						</div>
 					</div>
 
@@ -462,9 +488,9 @@
 					<div class="col-md-4">
 						<div class="fh5co-event to-animate-2">
 							<h3 class="event-title">Email</h3>
-							<p>Have questions? Reach out to <a href="mailto:eat.disco.cow@gmail.com">eat.disco.cow@gmail.com</a></p>
+							<p>Have questions? Reach out to <a href="/cdn-cgi/l/email-protection#610400154f050812020e4f020e1621060c00080d4f020e0c"><span class="__cf_email__" data-cfemail="4623273268222f3525296825293106212b272f2a6825292b">[email&#160;protected]</span></a></p>
 							<p><strong>We'd love to hear from you!</strong></p>
-							<p><a href="mailto:eat.disco.cow@gmail.com" class="btn btn-primary btn-outline btn-follow">Email Us</a></p>
+							<p><a href="/cdn-cgi/l/email-protection#d5b0b4a1fbb1bca6b6bafbb6baa295b2b8b4bcb9fbb6bab8" class="btn btn-primary btn-outline btn-follow">Email Us</a></p>
 						</div>
 					</div>
 				</div>
@@ -481,7 +507,7 @@
 						<a href="#" onclick="openModal('privacyModal')" style="color: rgba(255, 255, 255, 0.7); margin: 0 10px; cursor: pointer;">Privacy Policy</a> |
 						<a href="#" onclick="openModal('termsModal')" style="color: rgba(255, 255, 255, 0.7); margin: 0 10px; cursor: pointer;">Terms of Service</a> |
 						<a href="#" onclick="openModal('accessibilityModal')" style="color: rgba(255, 255, 255, 0.7); margin: 0 10px; cursor: pointer;">Accessibility</a> |
-						<a href="mailto:eat.disco.cow@gmail.com" style="color: rgba(255, 255, 255, 0.7); margin: 0 10px;">Contact</a>
+						<a href="/cdn-cgi/l/email-protection#0b6e6a7f256f627868642568647c4b6c666a626725686466" style="color: rgba(255, 255, 255, 0.7); margin: 0 10px;">Contact</a>
 					</p>
 					<p class="to-animate" style="font-size: 12px; margin-top: 10px; color: rgba(255, 255, 255, 0.5);">
 						No Curds at This Party! | High-protein whipped cottage cheese dips, spreads, and sauces.
@@ -539,7 +565,7 @@
                 </ul>
 
                 <h3>6. Contact Us</h3>
-                <p>If you have any questions about this Privacy Policy, please contact us at eat.disco.cow@gmail.com or by mail at:</p>
+                <p>If you have any questions about this Privacy Policy, please contact us at <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="bfdadecb91dbd6ccdcd091dcd0c8ffd8d2ded6d391dcd0d2">[email&#160;protected]</a> or by mail at:</p>
                 <p>Privacy Department<br>
                 123 Main Street<br>
                 City, State 12345 (Placeholder Address)</p>
@@ -594,7 +620,7 @@
                 <p>These Terms shall be governed and construed in accordance with the laws of [Your Country/State], without regard to its conflict of law provisions. Our failure to enforce any right or provision of these Terms will not be considered a waiver of those rights.</p>
 
                 <h3>9. Contact Information</h3>
-                <p>If you have any questions about these Terms, please contact us at eat.disco.cow@gmail.com.</p>
+                <p>If you have any questions about these Terms, please contact us at <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="a9ccc8dd87cdc0dacac687cac6dee9cec4c8c0c587cac6c4">[email&#160;protected]</a>.</p>
             </div>
         </div>
     </div>
@@ -641,7 +667,7 @@
                 <h3>Feedback</h3>
                 <p>We welcome your feedback on the accessibility of our website. Please let us know if you encounter accessibility barriers:</p>
                 <ul>
-                    <li>Email: eat.disco.cow@gmail.com</li>
+                    <li>Email: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="8ce9edf8a2e8e5ffefe3a2efe3fbccebe1ede5e0a2efe3e1">[email&#160;protected]</a></li>
                     <li>We try to respond to accessibility feedback within 5 business days.</li>
                 </ul>
 
@@ -666,7 +692,7 @@
             </div>
         </div>
     </div>
-	<script src="js/jquery.min.js"></script>
+	<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="js/jquery.min.js"></script>
 	<script src="js/jquery.easing.1.3.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/moment.js"></script>
@@ -771,23 +797,4 @@
         const navToggle = document.querySelector('.js-fh5co-nav-toggle');
         
         if (offcanvas && navToggle) {
-            // Find all section links inside the offcanvas menu
-            const offcanvasLinks = offcanvas.querySelectorAll('a[data-nav-section]');
-            
-            offcanvasLinks.forEach(link => {
-                link.addEventListener('click', function(e) {
-                    // Check if the link target is valid before closing
-                    // This uses the existing toggle mechanism implemented in main.js, which usually toggles a class on body
-                    if (navToggle.classList.contains('active')) {
-                        navToggle.click(); // Programmatically click the toggle to slide it out/close it
-                    }
-                    // Prevent the default jump behavior if needed, but the template already handles this with scroll-to
-                    // e.preventDefault(); 
-                });
-            });
-        }
-    });
-	</script>
-		
-	</body>
-</html>
+            // Find all section links inside
