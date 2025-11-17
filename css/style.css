@@ -63,7 +63,7 @@ p {
 }
 
 .section-logo img {
-  max-height: 64px;
+  max-height: 60px;
   height: auto;
   width: auto;
   margin: 0 auto;
@@ -75,7 +75,7 @@ p {
 }
 
 .section-logo-white img {
-  max-height: 64px;
+  max-height: 60px;
   height: auto;
   width: auto;
   margin: 0 auto;
@@ -90,6 +90,12 @@ p {
 .btn-submit,
 .btn-follow {
   font-family: "League Spartan", sans-serif !important;
+}
+
+/* Event title specific styling */
+#fh5co-events .fh5co-event h3.event-title {
+  font-family: "League Spartan", sans-serif !important;
+  font-style: normal;
 }
 
 /* UPDATED PRODUCT CARDS - FIXED SIZING */
@@ -694,7 +700,7 @@ p {
 .btn {
   margin-right: 4px;
   margin-bottom: 4px;
-  font-family: "Niconne", cursive;
+  font-family: "League Spartan", sans-serif;
   font-size: 12px;
   letter-spacing: 2px;
   text-transform: uppercase;
