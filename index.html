@@ -33,43 +33,49 @@
 
 	<script src="js/modernizr-2.6.2.min.js"></script>
 	<style>
-        /* Mobile Menu Override Styles - Complete Override */
-        /* Override all original offcanvas styles */
+        /* Mobile Menu Override Styles - Complete Reset and Override */
+        /* First, reset ALL offcanvas styles */
         #fh5co-offcanvas {
+            /* Reset positioning */
             display: block !important;
+            position: fixed !important;
+            top: 0 !important;
+            bottom: auto !important;
+            left: auto !important;
+            right: 0 !important;
+            
+            /* Dimensions and appearance */
+            width: 275px !important;
+            height: 100% !important;
             background: #f8f3cd !important;
             background-color: #f8f3cd !important;
             background-image: none !important;
-            position: fixed !important;
-            top: 0 !important;
-            right: auto !important;
-            left: 0 !important;
-            width: 275px !important;
-            height: 100% !important;
             padding: 50px 40px 40px 40px !important;
             overflow-y: auto !important;
             z-index: 1001 !important;
-            box-shadow: 5px 0 5px rgba(0,0,0,0.1) !important;
-            -moz-transform: translateX(-275px) !important;
-            -webkit-transform: translateX(-275px) !important;
-            -ms-transform: translateX(-275px) !important;
-            -o-transform: translateX(-275px) !important;
-            transform: translateX(-275px) !important;
-            -webkit-transition: 0.5s !important;
-            -o-transition: 0.5s !important;
-            transition: 0.5s !important;
+            box-shadow: -5px 0 15px rgba(0,0,0,0.1) !important;
+            
+            /* Slide from right - hidden state */
+            -moz-transform: translateX(275px) !important;
+            -webkit-transform: translateX(275px) !important;
+            -ms-transform: translateX(275px) !important;
+            -o-transform: translateX(275px) !important;
+            transform: translateX(275px) !important;
+            
+            /* Transition */
+            -webkit-transition: transform 0.5s ease !important;
+            -o-transition: transform 0.5s ease !important;
+            transition: transform 0.5s ease !important;
         }
         
-        .offcanvas-visible #fh5co-offcanvas {
-            -moz-transform: translateX(0px) !important;
-            -webkit-transform: translateX(0px) !important;
-            -ms-transform: translateX(0px) !important;
-            -o-transform: translateX(0px) !important;
-            transform: translateX(0px) !important;
-        }
-        
-        body.fh5co-offcanvas-visible #fh5co-offcanvas {
-            right: 0 !important;
+        /* When menu is visible - slide in from right */
+        .offcanvas-visible #fh5co-offcanvas,
+        body.offcanvas-visible #fh5co-offcanvas {
+            -moz-transform: translateX(0) !important;
+            -webkit-transform: translateX(0) !important;
+            -ms-transform: translateX(0) !important;
+            -o-transform: translateX(0) !important;
+            transform: translateX(0) !important;
         }
         
         #fh5co-offcanvas a {
