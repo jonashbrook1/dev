@@ -946,7 +946,7 @@ h3.section-subheading,
   z-index: 1001;
   top: 0;
   width: 275px;
-  background: rgba(0, 0, 0, 0.9);
+  background: #f8f3cd;  /* CREAM BACKGROUND */
   padding: 0.75em 1.25em;
   -moz-transform: translateX(-275px);
   -webkit-transform: translateX(-275px);
@@ -960,19 +960,25 @@ h3.section-subheading,
 
 #fh5co-offcanvas a {
   display: block;
-  color: $f8f3cd;
+  color: #5e493a;  /* BROWN TEXT */
   text-align: center;
-  padding: 7px 0;
+  padding: 15px 0;
+  font-family: "Niconne", cursive;
+  font-size: 20px;
+  transition: all 0.3s ease;
 }
         
 #fh5co-offcanvas a:hover, #fh5co-offcanvas a:focus, #fh5co-offcanvas a:active {
   outline: none;
   text-decoration: none;
-  color: #16178f;
+  color: #16178f;  /* BLUE TEXT ON HOVER */
+  background: rgba(22, 23, 143, 0.1);  /* BLUE HIGHLIGHT */
 }
 
 #fh5co-offcanvas a.active {
-  color: #16178f;
+  color: #16178f;  /* BLUE TEXT WHEN ACTIVE */
+  background: rgba(22, 23, 143, 0.15);
+  font-weight: bold;
 }
 
 @media screen and (max-width: 768px) {
