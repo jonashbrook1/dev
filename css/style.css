@@ -423,6 +423,13 @@ h3.section-subheading,
 /* ORDER MENU LINK - ALWAYS BLUE */
 .fh5co-main-nav .fh5co-menu-2 a[data-nav-section="order"] {
   color: #16178f !important;
+  font-weight: 700;
+}
+
+.fh5co-main-nav .fh5co-menu-2 a[data-nav-section="order"]:hover,
+.fh5co-main-nav .fh5co-menu-2 a[data-nav-section="order"]:focus,
+.fh5co-main-nav .fh5co-menu-2 a[data-nav-section="order"]:active {
+  color: #16178f !important;
 }
 
 .fh5co-main-nav .fh5co-menu-1 {
@@ -581,7 +588,7 @@ h3.section-subheading,
 
 /* ORDER SECTION - SIMILAR TO ABOUT US */
 #fh5co-order {
-  background: #fff;
+  background: #fff !important;
   width: 100%;
   padding: 7em 0;
 }
@@ -594,7 +601,7 @@ h3.section-subheading,
 
 #fh5co-order .fh5co-text {
   text-align: center;
-  background: #fff;
+  background: #fff !important;
 }
 
 #fh5co-order .fh5co-text .btn {
@@ -625,6 +632,17 @@ h3.section-subheading,
 #fh5co-order .fh5co-text p {
   line-height: 2;
   color: #5e493a;
+}
+
+#fh5co-order .section-logo {
+  display: block;
+  margin: 0 auto 20px auto;
+  text-align: center;
+}
+
+#fh5co-order .section-logo img {
+  display: block;
+  margin: 0 auto;
 }
 
 .availability-disclaimer {
