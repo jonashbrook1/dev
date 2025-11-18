@@ -719,17 +719,33 @@
 	    }
 	});
 
-	// Ensure modals are hidden on page load
+	// Ensure modals are hidden on page load and set up mobile menu
     window.addEventListener('DOMContentLoaded', function() {
+        // Hide all modals on page load
         const modals = document.querySelectorAll('.modal');
         modals.forEach(modal => {
             modal.classList.remove('active');
         });
         
         // Mobile Menu Auto-Close on Link Click
-        // The mobile menu uses the class .fh5co-nav-toggle to hide/show the menu
         const offcanvas = document.getElementById('fh5co-offcanvas');
         const navToggle = document.querySelector('.js-fh5co-nav-toggle');
         
         if (offcanvas && navToggle) {
-            // Find all section links inside
+            // Find all section links inside the mobile menu
+            const mobileLinks = offcanvas.querySelectorAll('a[data-nav-section]');
+            
+            mobileLinks.forEach(function(link) {
+                link.addEventListener('click', function() {
+                    // Close the mobile menu when a link is clicked
+                    if (document.body.classList.contains('offcanvas-visible')) {
+                        navToggle.click(); // Trigger the toggle to close menu
+                    }
+                });
+            });
+        }
+    });
+	</script>
+
+	</body>
+</html>
