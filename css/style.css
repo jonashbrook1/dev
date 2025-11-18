@@ -1,4 +1,3 @@
-/* DISCO COW BRAND STYLES */
 body {
   font-family: "League Spartan", sans-serif;
   font-size: 18px;
@@ -862,7 +861,7 @@ h3.section-subheading,
 
 .btn-primary {
   background: #16178f;
-  color: #fff !important;
+  color: #16178f !important;
   border: 2px solid #16178f;
 }
 
