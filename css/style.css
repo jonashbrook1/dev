@@ -605,7 +605,7 @@ h3.section-subheading,
 }
 
 #fh5co-order .fh5co-text .btn {
-  color: #16178f;
+  color: #fff;
 }
 
 #fh5co-order .fh5co-text .heading {
@@ -852,8 +852,8 @@ h3.section-subheading,
 }
 
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
-  background: #f16104 !important;
-  border-color: #f16104 !important;
+  background: #f8f3cd !important;
+  border-color: #f8f3cd !important;
 }
 
 .btn-primary.btn-outline {
