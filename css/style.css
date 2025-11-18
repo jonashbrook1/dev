@@ -574,12 +574,10 @@ h3.section-subheading,
   color: #a99c92;
 }
 
-/* UPDATED EVENTS SECTION - FIXED BACKGROUND */
 #fh5co-events {
   padding: 7em 0;
   background-color: transparent;
   background-size: cover;
-  background-attachment: fixed;
   background-position: center center;
   position: relative;
 }
