@@ -1036,7 +1036,7 @@ h3.section-subheading,
   display: none;
   margin: 0 auto;
   border-bottom: none !important;
-  background: rgba(0, 0, 0, 0.7);
+  background: #f8f3cd;
   padding: 10px;
   cursor: pointer;
   -webkit-border-radius: 4px;
