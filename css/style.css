@@ -261,24 +261,23 @@ h3.section-subheading,
   opacity: 1 !important;
   visibility: visible !important;
 }
-
 /* HERO LOGO FIX */
 .hero-logo {
-  position: relative !important;
-  z-index: 10 !important;
-  opacity: 1 !important;
-  visibility: visible !important;
+	position: relative !important;
+	z-index: 10 !important;
+	opacity: 1 !important;
+	visibility: visible !important;
 }
 
 #fh5co-home .fh5co-text img {
-  max-width: 250px !important;
-  width: 250px !important;
-  height: auto !important;
-  margin: 0 auto 30px auto !important;
-  display: block !important;
-  position: relative !important;
-  z-index: 10 !important;
-  opacity: 1 !important;
+	max-width: 250px !important;
+	width: 250px !important;
+	height: auto !important;
+	margin: 0 auto 30px auto !important;
+	display: block !important;
+	position: relative !important;
+	z-index: 10 !important;
+	opacity: 1 !important;
 }
 
 #fh5co-home .flexslider .fh5co-text h1 {
@@ -488,7 +487,7 @@ h3.section-subheading,
   }
 }
 
-/* ABOUT SECTION - WHITE BACKGROUND, BLACK TEXT, CENTERED */
+/* UPDATED ABOUT SECTION - WHITE BACKGROUND, BLACK TEXT, CENTERED */
 #fh5co-about {
   background: #fff;
   width: 100%;
@@ -501,6 +500,7 @@ h3.section-subheading,
   }
 }
 
+/* UPDATED - WHITE BACKGROUND */
 #fh5co-about .fh5co-text {
   text-align: center;
   background: #fff;
@@ -510,6 +510,7 @@ h3.section-subheading,
   color: #16178f;
 }
 
+/* UPDATED - BLACK TEXT */
 #fh5co-about .fh5co-text .heading {
   margin-bottom: 30px;
   color: #000;
@@ -531,11 +532,13 @@ h3.section-subheading,
   margin-left: -20px;
 }
 
+/* UPDATED - BLACK TEXT */
 #fh5co-about .fh5co-text p {
   line-height: 2;
   color: #5e493a;
 }
 
+/* UPDATED - BLUE ACCENT */
 #fh5co-about .fh5co-text p span.firstcharacter {
   float: left;
   color: #16178f;
@@ -571,7 +574,7 @@ h3.section-subheading,
   color: #a99c92;
 }
 
-/* EVENTS SECTION - FIXED BACKGROUND */
+/* UPDATED EVENTS SECTION - FIXED BACKGROUND */
 #fh5co-events {
   padding: 7em 0;
   background-color: transparent;
@@ -676,7 +679,7 @@ h3.section-subheading,
   margin-bottom: 0;
 }
 
-/* CONTACT SECTION - WHITE BACKGROUND */
+/* UPDATED CONTACT SECTION - WHITE BACKGROUND */
 #fh5co-contact {
   padding: 7em 0;
   background: #fff;
@@ -943,7 +946,7 @@ h3.section-subheading,
   z-index: 1001;
   top: 0;
   width: 275px;
-  background: #f8f3cd;
+  background: #f8f3cd;  /* CREAM BACKGROUND */
   padding: 0.75em 1.25em;
   -moz-transform: translateX(-275px);
   -webkit-transform: translateX(-275px);
@@ -957,7 +960,7 @@ h3.section-subheading,
 
 #fh5co-offcanvas a {
   display: block;
-  color: #5e493a;
+  color: #5e493a;  /* BROWN TEXT */
   text-align: center;
   padding: 15px 0;
   font-family: "Niconne", cursive;
@@ -968,12 +971,12 @@ h3.section-subheading,
 #fh5co-offcanvas a:hover, #fh5co-offcanvas a:focus, #fh5co-offcanvas a:active {
   outline: none;
   text-decoration: none;
-  color: #16178f;
-  background: rgba(22, 23, 143, 0.1);
+  color: #16178f;  /* BLUE TEXT ON HOVER */
+  background: rgba(22, 23, 143, 0.1);  /* BLUE HIGHLIGHT */
 }
 
 #fh5co-offcanvas a.active {
-  color: #16178f;
+  color: #16178f;  /* BLUE TEXT WHEN ACTIVE */
   background: rgba(22, 23, 143, 0.15);
   font-weight: bold;
 }
