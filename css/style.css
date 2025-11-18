@@ -1066,6 +1066,13 @@ h3.section-subheading,
   font-weight: bold;
 }
 
+#fh5co-offcanvas a[data-nav-section="order"]:hover,
+#fh5co-offcanvas a[data-nav-section="order"]:focus,
+#fh5co-offcanvas a[data-nav-section="order"]:active {
+  color: #16178f !important;
+  background: rgba(22, 23, 143, 0.15);
+}
+
 @media screen and (max-width: 768px) {
   #fh5co-offcanvas {
     display: block;
