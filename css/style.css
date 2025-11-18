@@ -4,7 +4,7 @@ body {
   font-size: 18px;
   font-weight: 300;
   line-height: 2;
-  color: #5e493a;
+  color: #16178f;
   background-color: #f8f3cd;
 }
 
@@ -531,6 +531,7 @@ h3.section-subheading,
   position: relative;
   padding-bottom: 30px;
   text-align: center;
+  font-size: 60px;	
 }
 
 #fh5co-about .fh5co-text .heading:after {
@@ -547,7 +548,7 @@ h3.section-subheading,
 /* UPDATED - BLACK TEXT */
 #fh5co-about .fh5co-text p {
   line-height: 2;
-  color: #5e493a;
+  color: #16178f;
 }
 
 /* UPDATED - BLUE ACCENT */
@@ -605,7 +606,13 @@ h3.section-subheading,
 }
 
 #fh5co-order .fh5co-text .btn {
-  color: #fff;
+  color: #fff !important;
+}
+
+#fh5co-order .fh5co-text .btn:hover,
+#fh5co-order .fh5co-text .btn:focus,
+#fh5co-order .fh5co-text .btn:active {
+  color: #16178f !important;
 }
 
 #fh5co-order .fh5co-text .heading {
@@ -616,6 +623,7 @@ h3.section-subheading,
   position: relative;
   padding-bottom: 30px;
   text-align: center;
+  font-size: 60px;
 }
 
 #fh5co-order .fh5co-text .heading:after {
@@ -631,7 +639,7 @@ h3.section-subheading,
 
 #fh5co-order .fh5co-text p {
   line-height: 2;
-  color: #5e493a;
+  color: #16178f;
 }
 
 #fh5co-order .section-logo {
@@ -645,6 +653,13 @@ h3.section-subheading,
   margin: 0 auto;
 }
 
+@media screen and (max-width: 768px) {
+  #fh5co-about .fh5co-text .heading,
+  #fh5co-order .fh5co-text .heading {
+    font-size: 30px;
+  }
+}
+
 .availability-disclaimer {
   background: #faebcd;
   padding: 15px;
@@ -652,7 +667,7 @@ h3.section-subheading,
   margin: 20px auto;
   max-width: 600px;
   font-size: 16px;
-  color: #5e493a;
+  color: #16178f;
 }
 
 #fh5co-events {
@@ -847,13 +862,14 @@ h3.section-subheading,
 
 .btn-primary {
   background: #16178f;
-  color: #fff;
+  color: #fff !important;
   border: 2px solid #16178f;
 }
 
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
   background: #f8f3cd !important;
   border-color: #f8f3cd !important;
+  color: #16178f !important;
 }
 
 .btn-primary.btn-outline {
@@ -966,7 +982,7 @@ h3.section-subheading,
 
 .legal-modal-content p,
 .legal-modal-content li {
-  color: #5e493a;
+  color: #16178f;
   line-height: 1.8;
   margin-bottom: 15px;
 }
@@ -1039,7 +1055,7 @@ h3.section-subheading,
 
 #fh5co-offcanvas a {
   display: block;
-  color: #5e493a;  /* BROWN TEXT */
+  color: #16178f;  /* BROWN TEXT */
   text-align: center;
   padding: 15px 0;
   font-family: "Niconne", cursive;
