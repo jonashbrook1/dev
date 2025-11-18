@@ -25,6 +25,7 @@ a {
 }
 a:hover, a:focus, a:active {
   color: #0d0d5c;
+  text-decoration: none;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -63,6 +64,7 @@ p {
   width: auto;
   display: inline-block;
   vertical-align: middle;
+  margin-bottom: 20px;
 }
 
 .section-logo img {
@@ -70,6 +72,7 @@ p {
   height: 60px;
   width: auto;
   display: block;
+  margin: 0 auto;
 }
 
 .section-logo-white {
@@ -143,6 +146,7 @@ h3.section-subheading,
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  height: 100%;
 }
 
 .product-card:hover {
@@ -180,6 +184,7 @@ h3.section-subheading,
 .product-card p {
   font-size: 16px;
   line-height: 1.6;
+  margin-bottom: 15px;
 }
 
 .social-prompt {
@@ -336,6 +341,7 @@ h3.section-subheading,
 #fh5co-home .flexslider .slides li {
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center center;
 }
 
 #fh5co-home .flexslider .fh5co-overlay {
@@ -357,6 +363,7 @@ h3.section-subheading,
 .fh5co-main-nav {
   position: relative;
   background: #fff;
+  z-index: 999;
 }
 
 .fh5co-main-nav.fh5co-shadow {
@@ -657,6 +664,7 @@ h3.section-subheading,
 @media screen and (max-width: 768px) {
   #fh5co-events {
     padding: 5em 0;
+    background-attachment: scroll;
   }
 }
 
@@ -796,6 +804,7 @@ h3.section-subheading,
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
+  padding: 10px 20px;
 }
 
 .btn.btn-md {
@@ -820,6 +829,7 @@ h3.section-subheading,
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
   background: #f16104 !important;
   border-color: #f16104 !important;
+  color: #fff !important;
 }
 
 .btn-primary.btn-outline {
