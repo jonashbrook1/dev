@@ -43,24 +43,24 @@ p {
   letter-spacing: 8px;
 }
 
-/* UPDATED LOGO SIZE - 20% BIGGER (was 60px, now 72px) */
+/* UPDATED LOGO SIZE - INCREASED TO 90PX */
 .main-logo {
-  max-height: 72px;
+  max-height: 90px;
   width: auto;
   display: inline-block;
   vertical-align: middle;
 }
 
 .fh5co-logo img {
-  max-height: 72px;
+  max-height: 90px;
   height: auto;
   width: auto;
   display: block;
 }
 
-/* SECTION LOGO STYLING - 20% BIGGER (was 60px, now 72px) */
+/* SECTION LOGO STYLING - INCREASED TO 90PX */
 .section-logo {
-  max-height: 72px;
+  max-height: 90px;
   width: auto;
   display: inline-block;
   vertical-align: middle;
@@ -68,8 +68,8 @@ p {
 }
 
 .section-logo img {
-  max-height: 72px;
-  height: 72px;
+  max-height: 90px;
+  height: 90px;
   width: auto;
   display: block;
 }
@@ -79,7 +79,7 @@ p {
 }
 
 .section-logo-white img {
-  max-height: 72px;
+  max-height: 90px;
   height: auto;
   width: auto;
   margin: 0 auto;
@@ -507,16 +507,16 @@ h3.section-subheading,
   }
 }
 
-/* UPDATED ABOUT SECTION - WHITE BACKGROUND, BLACK TEXT, CENTERED - REDUCED PADDING */
+/* UPDATED ABOUT SECTION - WHITE BACKGROUND, BLACK TEXT, CENTERED - REDUCED PADDING BY HALF */
 #fh5co-about {
   background: #fff;
   width: 100%;
-  padding: 4em 0; /* REDUCED FROM 7em */
+  padding: 2em 0; /* REDUCED BY HALF FROM 4em */
 }
 
 @media screen and (max-width: 768px) {
   #fh5co-about {
-    padding: 3em 0; /* REDUCED FROM 5em */
+    padding: 1.5em 0; /* REDUCED BY HALF FROM 3em */
   }
 }
 
@@ -595,16 +595,16 @@ h3.section-subheading,
   color: #a99c92;
 }
 
-/* ORDER SECTION - SIMILAR TO ABOUT US - REDUCED PADDING */
+/* ORDER SECTION - SIMILAR TO ABOUT US - REDUCED PADDING BY HALF */
 #fh5co-order {
   background: #fff !important;
   width: 100%;
-  padding: 4em 0; /* REDUCED FROM 7em */
+  padding: 2em 0; /* REDUCED BY HALF FROM 4em */
 }
 
 @media screen and (max-width: 768px) {
   #fh5co-order {
-    padding: 3em 0; /* REDUCED FROM 5em */
+    padding: 1.5em 0; /* REDUCED BY HALF FROM 3em */
   }
 }
 
@@ -715,7 +715,7 @@ h3.section-subheading,
 }
 
 .availability-disclaimer {
-  background: #faebcd;
+  background: #f8f3cd;
   padding: 15px;
   border-radius: 4px;
   margin: 20px auto;
@@ -829,13 +829,13 @@ h3.section-subheading,
 
 /* UPDATED CONTACT SECTION - WHITE BACKGROUND */
 #fh5co-contact {
-  padding: 7em 0;
+  padding: 3.5em 0; /* REDUCED BY HALF FROM 7em */
   background: #fff;
 }
 
 @media screen and (max-width: 768px) {
   #fh5co-contact {
-    padding: 5em 0;
+    padding: 2.5em 0; /* REDUCED BY HALF FROM 5em */
   }
 }
 
