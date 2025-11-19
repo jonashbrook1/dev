@@ -488,9 +488,9 @@
 				</div>
 				<div class="row">
 					<div class="col-md-12">
-						<div class="curator-feed-wrapper to-animate-2">
+						<div class="curator-feed-wrapper to-animate-2" style="position: relative; z-index: 10; overflow: visible;">
 							<!-- Place <div> tag where you want the feed to appear -->
-							<div id="curator-feed-default-feed-layout"><a href="https://curator.io" target="_blank" class="crt-logo crt-tag">Powered by Curator.io</a></div>
+							<div id="curator-feed-default-feed-layout" style="position: relative; z-index: 10;"><a href="https://curator.io" target="_blank" class="crt-logo crt-tag">Powered by Curator.io</a></div>
 						</div>
 					</div>
 				</div>
@@ -762,6 +762,17 @@
 	i.src="https://cdn.curator.io/published/69295338-d0e2-413c-af4b-e955b7711a0f.js";
 	e=d.getElementsByTagName(s)[0];e.parentNode.insertBefore(i, e);
 	})();
+	
+	// Safari rendering fix - force repaint after feed loads
+	setTimeout(function() {
+		var feedContainer = document.getElementById('curator-feed-default-feed-layout');
+		if (feedContainer) {
+			feedContainer.style.opacity = '0.99';
+			setTimeout(function() {
+				feedContainer.style.opacity = '1';
+			}, 10);
+		}
+	}, 2000);
 	</script>
 	
 	<script>
