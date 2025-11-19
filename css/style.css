@@ -39,46 +39,47 @@ p {
 
 /* DISCO COW SPECIFIC STYLES */
 .disco-cow-title {
-  font-family: "Niconne", cursive !important;
+  font-family: "Nautilus Pompilius", cursive !important;
   letter-spacing: 8px;
 }
 
-/* UPDATED LOGO SIZE - FIXED */
+/* UPDATED LOGO SIZE - 20% BIGGER (was 60px, now 72px) */
 .main-logo {
-  max-height: 60px;
+  max-height: 72px;
   width: auto;
   display: inline-block;
   vertical-align: middle;
 }
 
 .fh5co-logo img {
-  max-height: 60px;
+  max-height: 72px;
   height: auto;
   width: auto;
   display: block;
 }
 
-/* SECTION LOGO STYLING - UPDATED TO 60PX MAX */
+/* SECTION LOGO STYLING - 20% BIGGER (was 60px, now 72px) */
 .section-logo {
-  max-height: 60px;
+  max-height: 72px;
   width: auto;
   display: inline-block;
   vertical-align: middle;
+  margin-bottom: 10px; /* REDUCED FROM 20px - 50% less whitespace */
 }
 
 .section-logo img {
-  max-height: 60px;
-  height: 60px;
+  max-height: 72px;
+  height: 72px;
   width: auto;
   display: block;
 }
 
 .section-logo-white {
-  margin-bottom: 20px;
+  margin-bottom: 10px; /* REDUCED FROM 20px */
 }
 
 .section-logo-white img {
-  max-height: 60px;
+  max-height: 72px;
   height: auto;
   width: auto;
   margin: 0 auto;
@@ -132,7 +133,7 @@ h3.section-subheading,
   font-style: normal;
 }
 
-/* UPDATED PRODUCT CARDS - FIXED SIZING */
+/* UPDATED PRODUCT CARDS - SAME HEIGHT FOR ALL */
 .product-card {
   background: #fff;
   padding: 30px;
@@ -144,6 +145,7 @@ h3.section-subheading,
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  min-height: 550px; /* FIXED HEIGHT FOR ALL CARDS */
 }
 
 .product-card:hover {
@@ -281,10 +283,15 @@ h3.section-subheading,
 	opacity: 1 !important;
 }
 
+/* HERO CTA BUTTON */
+.hero-cta {
+  margin-top: 30px;
+}
+
 #fh5co-home .flexslider .fh5co-text h1 {
   margin: 0;
   padding: 0;
-  font-family: "Niconne", cursive;
+  font-family: "Nautilus Pompilius", cursive;
   font-size: 300px;
   font-weight: 700;
   font-style: italic;
@@ -324,7 +331,7 @@ h3.section-subheading,
 }
 
 #fh5co-home .flexslider .fh5co-text h2 span {
-  font-family: "Niconne", cursive;
+  font-family: "Nautilus Pompilius", cursive;
   font-style: italic;
   text-transform: none;
 }
@@ -400,7 +407,7 @@ h3.section-subheading,
   display: inline-block;
   zoom: 1;
   *display: inline;
-  font-family: "Niconne", cursive;
+  font-family: "League Spartan", sans-serif; /* CHANGED FROM NICONNE */
   font-size: 18px;
 }
 
@@ -446,7 +453,7 @@ h3.section-subheading,
   text-align: center;
   width: 19.33%;
   font-size: 40px;
-  font-family: "Niconne", cursive;
+  font-family: "Nautilus Pompilius", cursive;
   font-weight: 700;
   font-style: italic;
 }
@@ -500,16 +507,16 @@ h3.section-subheading,
   }
 }
 
-/* UPDATED ABOUT SECTION - WHITE BACKGROUND, BLACK TEXT, CENTERED */
+/* UPDATED ABOUT SECTION - WHITE BACKGROUND, BLACK TEXT, CENTERED - REDUCED PADDING */
 #fh5co-about {
   background: #fff;
   width: 100%;
-  padding: 7em 0;
+  padding: 4em 0; /* REDUCED FROM 7em */
 }
 
 @media screen and (max-width: 768px) {
   #fh5co-about {
-    padding: 5em 0;
+    padding: 3em 0; /* REDUCED FROM 5em */
   }
 }
 
@@ -564,17 +571,17 @@ h3.section-subheading,
   font-style: italic;
   top: -20px;
   position: relative;
-  font-family: "Niconne", cursive;
+  font-family: "Nautilus Pompilius", cursive;
 }
 
 #fh5co-featured {
-  padding: 7em 0;
+  padding: 4em 0; /* REDUCED FROM 7em */
   background: #f9f9f9;
 }
 
 @media screen and (max-width: 768px) {
   #fh5co-featured {
-    padding: 5em 0;
+    padding: 3em 0; /* REDUCED FROM 5em */
   }
 }
 
@@ -588,16 +595,16 @@ h3.section-subheading,
   color: #a99c92;
 }
 
-/* ORDER SECTION - SIMILAR TO ABOUT US */
+/* ORDER SECTION - SIMILAR TO ABOUT US - REDUCED PADDING */
 #fh5co-order {
   background: #fff !important;
   width: 100%;
-  padding: 7em 0;
+  padding: 4em 0; /* REDUCED FROM 7em */
 }
 
 @media screen and (max-width: 768px) {
   #fh5co-order {
-    padding: 5em 0;
+    padding: 3em 0; /* REDUCED FROM 5em */
   }
 }
 
@@ -645,13 +652,59 @@ h3.section-subheading,
 
 #fh5co-order .section-logo {
   display: block;
-  margin: 0 auto 20px auto;
+  margin: 0 auto 10px auto; /* REDUCED FROM 20px */
   text-align: center;
 }
 
 #fh5co-order .section-logo img {
   display: block;
   margin: 0 auto;
+}
+
+/* ORDERING STEPS STYLING */
+.ordering-steps {
+  max-width: 700px;
+  margin: 30px auto;
+  text-align: left;
+}
+
+.ordering-step {
+  background: #f8f3cd;
+  padding: 20px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  display: flex;
+  align-items: flex-start;
+  border-left: 4px solid #16178f;
+}
+
+.step-number {
+  background: #16178f;
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 20px;
+  flex-shrink: 0;
+  margin-right: 20px;
+}
+
+.step-content h4 {
+  margin: 0 0 5px 0;
+  color: #16178f;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.step-content p {
+  margin: 0;
+  color: #16178f;
+  font-size: 16px;
+  line-height: 1.6;
 }
 
 @media screen and (max-width: 768px) {
@@ -672,7 +725,7 @@ h3.section-subheading,
 }
 
 #fh5co-events {
-  padding: 7em 0;
+  padding: 4em 0; /* REDUCED FROM 7em */
   background-color: transparent;
   background-size: cover;
   background-position: center center;
@@ -706,7 +759,7 @@ h3.section-subheading,
 
 @media screen and (max-width: 768px) {
   #fh5co-events {
-    padding: 5em 0;
+    padding: 3em 0; /* REDUCED FROM 5em */
   }
 }
 
@@ -1064,7 +1117,7 @@ select.form-control {
   color: #16178f;  /* BROWN TEXT */
   text-align: center;
   padding: 15px 0;
-  font-family: "Niconne", cursive;
+  font-family: "League Spartan", sans-serif; /* CHANGED FROM NICONNE */
   font-size: 20px;
   transition: all 0.3s ease;
 }
