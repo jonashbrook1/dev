@@ -1005,7 +1005,6 @@ h3.section-subheading,
   /* Adjust video wrapper for mobile - slightly less tall */
   .video-wrapper {
     padding-bottom: 150%;
-  }
 }
 
 @media screen and (max-width: 480px) {
