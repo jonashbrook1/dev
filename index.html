@@ -234,10 +234,7 @@
 			<div class="container">
 				<div class="row text-center fh5co-heading row-padded">
 					<div class="col-md-8 col-md-offset-2">
-						<div class="section-logo to-animate">
-							<img src="images/DC_LOGO_4.png" alt="Disco Cow Logo" style="max-height: 90px; width: auto; height: auto;">
-						</div>
-						<h2 class="heading to-animate">Join the Waitlist!</h2>
+						<h2 class="heading to-animate">Join the Waitlist</h2>
 						<p class="sub-heading to-animate">Be the first to know when Disco Cow launches in your city</p>
 						<div class="availability-disclaimer to-animate">
 							<strong>Coming Soon:</strong> Chicago, IL and Salt Lake City, UT
@@ -343,14 +340,10 @@
 								</select>
 							</div>
 							<div class="form-group">
-								<input id="social" name="social" class="form-control" placeholder="Your Instagram or TikTok handle (optional)" type="text">
-								<div class="instagram-handle-format">Example: @yourusername</div>
-							</div>
-							<div class="form-group">
 								<input class="btn btn-primary btn-submit" type="submit" value="Submit">
 							</div>
 						</form>
-						<p id="formMsg" style="color:green;"></p>
+						<p id="formMsg" style="margin-top: 10px;"></p>
 					</div>
 				</div>
 			</div>
@@ -358,19 +351,18 @@
 
 		<div id="fh5co-about" data-section="about">
 			<div class="fh5co-text" style="width: 100%; max-width: 800px; margin: 0 auto; padding: 5em 2em;">
-				<div class="section-logo to-animate">
-					<img src="images/DC_LOGO_4.png" alt="Disco Cow Logo" style="max-height: 90px; width: auto; height: auto;">
-				</div>
-				<h2 class="heading to-animate">About Us!</h2>
+				<h2 class="heading to-animate">About Us</h2>
 				<p class="to-animate">We're Kate and Katie, two Midwest girls who really, really love to snack. We grew up around potlucks, tailgates, and kitchen counters full of dips, where food wasn't fancy, but it always brought people together. Somewhere along the way, cottage cheese got left out of the mix. So we fixed that.</p>
 				<p class="to-animate">We whipped it, literally. We took the classic and made it smooth, flavorful, and packed with protein. No curds, no clumps: just something you actually want to dip into again and again.</p>
 				<p class="to-animate">Our goal? To put whipped cottage cheese back where it belongs: at the center of every get-together, from game days to late-night hangs. Because the best snacks don't just sit on the table, they bring people back for more.</p>
-				<p class="text-center to-animate">
-					<a href="#fh5co-contact" data-nav-section="reservation" class="btn btn-primary btn-lg">Join the Waitlist</a>
-				</p>
-				<p class="text-center to-animate">
-					<a href="#fh5co-order" data-nav-section="order" class="btn btn-primary btn-lg">Order Now</a>
-				</p>
+				<div class="text-center to-animate social-buttons">
+					<a href="https://www.instagram.com/itsdiscocow" target="_blank" class="social-logo-link">
+						<img src="images/instagram_logo.png" alt="Follow us on Instagram" class="social-logo">
+					</a>
+					<a href="https://www.tiktok.com/@itsdiscocow" target="_blank" class="social-logo-link">
+						<img src="images/tiktok_logo.png" alt="Follow us on TikTok" class="social-logo">
+					</a>
+				</div>
 			</div>
 		</div>
 
@@ -378,7 +370,7 @@
 			<div class="container">
 				<div class="row text-center fh5co-heading row-padded">
 					<div class="col-md-8 col-md-offset-2">
-						<h2 class="heading to-animate">Our Greatest Hits!</h2>
+						<h2 class="heading to-animate">Our Greatest Hits</h2>
 						<p class="sub-heading to-animate">High-protein dips and spreads for every occasion</p>
 					</div>
 				</div>
@@ -437,10 +429,7 @@
 
 		<div id="fh5co-order" data-section="order">
 			<div class="fh5co-text" style="width: 100%; max-width: 800px; margin: 0 auto; padding: 5em 2em;">
-				<div class="section-logo to-animate">
-					<img src="images/DC_LOGO_4.png" alt="Disco Cow Logo" style="max-height: 90px; width: auto; height: auto;">
-				</div>
-				<h2 class="heading to-animate">Order Now!</h2>
+				<h2 class="heading to-animate">Order Now</h2>
 				<p class="to-animate">Let's get this party started! Join us on Hotplate to order your Disco Cow favorites and stay in the groove with exclusive product drops, fresh flavors, and first-dibs deals!</p>
 				<p class="to-animate">Hotplate connects you to local food makers like us. Check out our full lineup and get down at our next product drop near you!</p>
 				
@@ -481,7 +470,8 @@
 				</div>
 				
 				<div class="availability-disclaimer to-animate">
-					<strong>Coming Soon:</strong> Chicago, IL and Salt Lake City, UT only
+					<strong>Coming Soon:</strong> Chicago, IL and Salt Lake City, UT only<br>
+					Not in your city? <a href="#fh5co-contact" data-nav-section="reservation" style="text-decoration: underline;">Join the waitlist</a> so we can bring the party to you!
 				</div>
 				<p class="text-center to-animate"><a href="https://www.hotplate.com/discocow" target="_blank" class="btn btn-primary btn-lg">Order on Hotplate</a></p>
 			</div>
@@ -561,7 +551,6 @@
                     <li>Name and email address when you join our waitlist</li>
                     <li>City location preference</li>
                     <li>Product preferences</li>
-                    <li>Social media handles (optional)</li>
                     <li>Information provided in support tickets</li>
                 </ul>
 
@@ -728,20 +717,39 @@
 	<script src="js/main.js"></script>
 
 	<script>
-	// Google Sheet Waitlist Form
+	// Google Sheet Waitlist Form with validation
 	const form = document.getElementById("reservationForm");
 	const formMsg = document.getElementById("formMsg");
 	
 	form.addEventListener("submit", async function(e){
 	    e.preventDefault();
 	    formMsg.textContent = "";
+	    formMsg.style.color = "";
+	
+	    // Get form values
+	    const name = document.getElementById("name").value.trim();
+	    const email = document.getElementById("email").value.trim();
+	    const city = document.getElementById("city").value;
+	    const product = document.getElementById("product").value;
+	    
+	    // Validation
+	    const missingFields = [];
+	    if (!name) missingFields.push("Full Name");
+	    if (!email) missingFields.push("Email Address");
+	    if (!city) missingFields.push("State/Territory");
+	    if (!product) missingFields.push("Flavor preference");
+	    
+	    if (missingFields.length > 0) {
+	        formMsg.textContent = "Please complete: " + missingFields.join(", ");
+	        formMsg.style.color = "red";
+	        return;
+	    }
 	
 	    const data = {
-	        name: document.getElementById("name").value,
-	        email: document.getElementById("email").value,
-	        city: document.getElementById("city").value,
-	        product: document.getElementById("product").value,
-	        social: document.getElementById("social").value
+	        name: name,
+	        email: email,
+	        city: city,
+	        product: product
 	    };
 	
 	    try {
