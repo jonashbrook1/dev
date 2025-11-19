@@ -865,6 +865,51 @@ h3.section-subheading,
   margin-bottom: 0;
 }
 
+/* CURATOR FEED STYLING */
+.curator-feed-wrapper {
+  background: transparent;
+  padding: 20px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+#curator-feed-default-feed-layout {
+  width: 100%;
+  min-height: 400px;
+  background: transparent;
+}
+
+/* Ensure Curator.io feed fits well on all devices */
+.curator-feed-wrapper .crt-feed {
+  background: transparent !important;
+}
+
+/* Mobile responsive adjustments for Curator feed */
+@media screen and (max-width: 768px) {
+  .curator-feed-wrapper {
+    padding: 10px;
+  }
+  
+  #curator-feed-default-feed-layout {
+    min-height: 300px;
+  }
+}
+
+/* Safari-specific fixes for Curator feed */
+@supports (-webkit-appearance: none) {
+  .curator-feed-wrapper {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+}
+
+/* Ensure feed content is visible over dark background */
+#fh5co-events .curator-feed-wrapper * {
+  position: relative;
+  z-index: 10;
+}
+
 /* UPDATED CONTACT SECTION - WHITE BACKGROUND */
 #fh5co-contact {
   padding: 3.5em 0; /* REDUCED BY HALF FROM 7em */
