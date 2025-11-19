@@ -43,6 +43,41 @@ p {
   letter-spacing: 8px;
 }
 
+/* SOCIAL LOGO BUTTONS FOR ABOUT US */
+.social-buttons {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.social-logo-link {
+  display: inline-block;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.social-logo-link:hover {
+  transform: translateY(-5px);
+  opacity: 0.8;
+}
+
+.social-logo {
+  max-width: 80px;
+  height: auto;
+  display: block;
+}
+
+@media screen and (max-width: 768px) {
+  .social-buttons {
+    gap: 20px;
+  }
+  
+  .social-logo {
+    max-width: 60px;
+  }
+}
+
 /* UPDATED LOGO SIZE - INCREASED TO 90PX */
 .main-logo {
   max-height: 90px;
