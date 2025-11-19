@@ -484,13 +484,79 @@
 					<div class="col-md-8 col-md-offset-2">
 						<h2 class="heading to-animate">Connect With Us</h2>
 						<p class="sub-heading to-animate">Join the party on social media!</p>
+						
+						<!-- Social Media Buttons -->
+						<div class="text-center to-animate social-buttons" style="margin-top: 30px; margin-bottom: 40px;">
+							<a href="https://www.instagram.com/itsdiscocow" target="_blank" class="social-logo-link">
+								<img src="images/instagram_logo.png" alt="Follow us on Instagram" class="social-logo">
+							</a>
+							<a href="https://www.tiktok.com/@itsdiscocow" target="_blank" class="social-logo-link">
+								<img src="images/tiktok_logo.png" alt="Follow us on TikTok" class="social-logo">
+							</a>
+						</div>
 					</div>
 				</div>
+				
+				<!-- Instagram Video Carousel -->
 				<div class="row">
-					<div class="col-md-12">
-						<div class="curator-feed-wrapper to-animate-2" style="position: relative; z-index: 10; overflow: visible;">
-							<!-- Place <div> tag where you want the feed to appear -->
-							<div id="curator-feed-default-feed-layout" style="position: relative; z-index: 10;"><a href="https://curator.io" target="_blank" class="crt-logo crt-tag">Powered by Curator.io</a></div>
+					<div class="col-md-10 col-md-offset-1">
+						<div class="instagram-carousel to-animate-2">
+							<button class="carousel-arrow carousel-arrow-left" onclick="moveCarousel(-1)" aria-label="Previous video">
+								<span>&lt;</span>
+							</button>
+							
+							<div class="carousel-container">
+								<div class="carousel-track" id="carouselTrack">
+									<div class="carousel-slide">
+										<div class="video-wrapper">
+											<video class="carousel-video" controls playsinline preload="metadata">
+												<source src="images/instagram_1.mp4" type="video/mp4">
+												Your browser does not support the video tag.
+											</video>
+											<a href="https://www.instagram.com/itsdiscocow" target="_blank" class="instagram-overlay-link">
+												<span>View on Instagram</span>
+											</a>
+										</div>
+									</div>
+									<div class="carousel-slide">
+										<div class="video-wrapper">
+											<video class="carousel-video" controls playsinline preload="metadata">
+												<source src="images/instagram_2.mp4" type="video/mp4">
+												Your browser does not support the video tag.
+											</video>
+											<a href="https://www.instagram.com/itsdiscocow" target="_blank" class="instagram-overlay-link">
+												<span>View on Instagram</span>
+											</a>
+										</div>
+									</div>
+									<div class="carousel-slide">
+										<div class="video-wrapper">
+											<video class="carousel-video" controls playsinline preload="metadata">
+												<source src="images/instagram_3.mp4" type="video/mp4">
+												Your browser does not support the video tag.
+											</video>
+											<a href="https://www.instagram.com/itsdiscocow" target="_blank" class="instagram-overlay-link">
+												<span>View on Instagram</span>
+											</a>
+										</div>
+									</div>
+									<div class="carousel-slide">
+										<div class="video-wrapper">
+											<video class="carousel-video" controls playsinline preload="metadata">
+												<source src="images/instagram_4.mp4" type="video/mp4">
+												Your browser does not support the video tag.
+											</video>
+											<a href="https://www.instagram.com/itsdiscocow" target="_blank" class="instagram-overlay-link">
+												<span>View on Instagram</span>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							
+							<button class="carousel-arrow carousel-arrow-right" onclick="moveCarousel(1)" aria-label="Next video">
+								<span>&gt;</span>
+							</button>
 						</div>
 					</div>
 				</div>
@@ -754,34 +820,85 @@
 	});
 	</script>
 	
-	<!-- The Javascript for Curator.io feed - placed before closing body tag -->
-	<script type="text/javascript">
-	/* curator-feed-default-feed-layout */
-	(function(){
-	var i,e,d=document,s="script";i=d.createElement("script");i.async=1;i.charset="UTF-8";
-	i.src="https://cdn.curator.io/published/69295338-d0e2-413c-af4b-e955b7711a0f.js";
-	e=d.getElementsByTagName(s)[0];e.parentNode.insertBefore(i, e);
-	})();
-	
-	// Safari rendering fix - force repaint after feed loads
-	setTimeout(function() {
-		var feedContainer = document.getElementById('curator-feed-default-feed-layout');
-		if (feedContainer) {
-			feedContainer.style.opacity = '0.99';
-			setTimeout(function() {
-				feedContainer.style.opacity = '1';
-			}, 10);
-		}
-	}, 2000);
-	</script>
-	
 	<script>
     let scrollPos = 0;
+    let currentSlide = 0;
+
+	// Carousel Navigation with Video Control
+	function moveCarousel(direction) {
+	    const track = document.getElementById('carouselTrack');
+	    const slides = document.querySelectorAll('.carousel-slide');
+	    const videos = document.querySelectorAll('.carousel-video');
+	    const totalSlides = slides.length;
+	    
+	    // Pause current video before moving
+	    if (videos[currentSlide]) {
+	        videos[currentSlide].pause();
+	    }
+	    
+	    currentSlide += direction;
+	    
+	    // Loop around
+	    if (currentSlide < 0) {
+	        currentSlide = totalSlides - 1;
+	    } else if (currentSlide >= totalSlides) {
+	        currentSlide = 0;
+	    }
+	    
+	    // Calculate the offset
+	    const slideWidth = slides[0].offsetWidth;
+	    const offset = -currentSlide * slideWidth;
+	    
+	    track.style.transform = `translateX(${offset}px)`;
+	    
+	    // Optional: Pause the new video too (user can click play)
+	    if (videos[currentSlide]) {
+	        videos[currentSlide].pause();
+	    }
+	}
+
+	// Pause all videos when navigating away from the section
+	window.addEventListener('scroll', function() {
+	    const videos = document.querySelectorAll('.carousel-video');
+	    const eventsSection = document.getElementById('fh5co-events');
+	    
+	    if (eventsSection) {
+	        const rect = eventsSection.getBoundingClientRect();
+	        const isVisible = rect.top < window.innerHeight && rect.bottom >= 0;
+	        
+	        if (!isVisible) {
+	            videos.forEach(function(video) {
+	                video.pause();
+	            });
+	        }
+	    }
+	});
+
+	// Handle window resize to maintain proper carousel position
+	let resizeTimer;
+	window.addEventListener('resize', function() {
+	    clearTimeout(resizeTimer);
+	    resizeTimer = setTimeout(function() {
+	        const track = document.getElementById('carouselTrack');
+	        const slides = document.querySelectorAll('.carousel-slide');
+	        if (slides.length > 0) {
+	            const slideWidth = slides[0].offsetWidth;
+	            const offset = -currentSlide * slideWidth;
+	            track.style.transform = `translateX(${offset}px)`;
+	        }
+	    }, 250);
+	});
 
 	// Function to open modal
     function openModal(modalId) {
         const modal = document.getElementById(modalId);
         if (!modal) return;
+        
+        // Pause all videos when opening modal
+        const videos = document.querySelectorAll('.carousel-video');
+        videos.forEach(function(video) {
+            video.pause();
+        });
         
         // Save current scroll position before opening
         scrollPos = window.scrollY;
