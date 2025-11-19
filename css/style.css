@@ -1,3 +1,4 @@
+body {
   font-family: "League Spartan", sans-serif;
   font-size: 18px;
   font-weight: 300;
@@ -762,37 +763,36 @@ h3.section-subheading,
 }
 
 #fh5co-events {
-  background: #fff !important;
-  padding: 4em 0;
-  width: 100%;
+  padding: 4em 0; /* REDUCED FROM 7em */
   background-color: transparent;
   background-size: cover;
   background-position: center center;
   position: relative;
-  overflow: visible;
-  -webkit-overflow-scrolling: touch;
 }
 
 #fh5co-events > .fh5co-overlay {
-  display: none;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 9;
 }
 
 #fh5co-events > .container {
   z-index: 10;
   position: relative;
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
 }
 
 #fh5co-events .fh5co-heading .heading {
-    color: #000;
-    font-weight: 700;
-    position: relative;
-    padding-bottom: 30px;
+  position: relative;
+  padding-top: 30px !important;
+  color: #fff;
 }
 
 #fh5co-events .fh5co-heading .sub-heading {
-  color: #16178f;
+  color: #a99c92;
 }
 
 @media screen and (max-width: 768px) {
@@ -863,184 +863,6 @@ h3.section-subheading,
 
 #fh5co-events .fh5co-event .btn {
   margin-bottom: 0;
-}
-
-/* INSTAGRAM CAROUSEL STYLING - VIDEO VERSION */
-.instagram-carousel {
-    position: relative;
-    max-width: 320px; /* Limits width to phone-size, automatically limits height */
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-/* 3. Single Video Container (Hides others) */
-.carousel-container {
-    overflow: hidden;
-    width: 100%;
-    border-radius: 12px;
-    background: #000;
-    aspect-ratio: 9 / 16; /* Forces vertical video shape */
-    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-}
-
-.carousel-track {
-    display: flex;
-    transition: transform 0.4s ease-in-out;
-    width: 100%;
-}
-
-.carousel-slide {
-    min-width: 100%;
-    flex-shrink: 0;
-}
-
-.video-wrapper {
-    width: 100%;
-    height: 100%;
-    position: relative;
-}
-
-.carousel-video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-/* Video controls styling */
-.carousel-video::-webkit-media-controls-panel {
-  background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
-}
-
-/* Instagram overlay link */
-.instagram-overlay-link {
-  position: absolute;
-  bottom: 60px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: rgba(22, 23, 143, 0.9);
-  color: #fff;
-  padding: 10px 20px;
-  border-radius: 20px;
-  text-decoration: none;
-  font-family: "League Spartan", sans-serif;
-  font-size: 14px;
-  font-weight: 600;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  z-index: 10;
-  pointer-events: auto;
-}
-
-.video-wrapper:hover .instagram-overlay-link {
-  opacity: 1;
-}
-
-.instagram-overlay-link:hover {
-  background: rgba(22, 23, 143, 1);
-  transform: translateX(-50%) translateY(-2px);
-  color: #fff;
-}
-
-.carousel-arrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: transparent;
-    border: none;
-    color: #16178f; /* Disco Cow Blue */
-    font-size: 60px; /* Large arrow size */
-    font-weight: 300;
-    font-family: 'League Spartan', sans-serif;
-    cursor: pointer;
-    z-index: 20;
-    padding: 0 20px;
-    transition: transform 0.2s ease;
-}
-
-.carousel-arrow:hover {
-    color: #0d0d5c; /* Darker blue on hover */
-    transform: translateY(-50%) scale(1.2); /* Slight zoom effect */
-}
-
-/* Position arrows outside the video player */
-.carousel-arrow-left {
-    left: -80px; 
-}
-
-.carousel-arrow-right {
-    right: -80px;
-}
-
-/* Mobile Response: Bring arrows closer if screen is small */
-@media (max-width: 600px) {
-    .carousel-arrow {
-        font-size: 40px;
-        background: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
-        border-radius: 50%;
-        width: 50px;
-        height: 50px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 0;
-    }
-    
-    .carousel-arrow-left {
-        left: -20px;
-    }
-    
-    .carousel-arrow-right {
-        right: -20px;
-    }
-}
-  
-  .instagram-overlay-link {
-    font-size: 12px;
-    padding: 8px 16px;
-    bottom: 50px;
-  }
-  
-  /* Adjust video wrapper for mobile - slightly less tall */
-  .video-wrapper {
-    padding-bottom: 150%;
-}
-
-@media screen and (max-width: 480px) {
-  .instagram-carousel {
-    gap: 5px;
-  }
-  
-  .carousel-arrow {
-    width: 35px;
-    height: 35px;
-    font-size: 18px;
-  }
-  
-  .instagram-overlay-link {
-    font-size: 11px;
-    padding: 6px 12px;
-    bottom: 45px;
-  }
-  
-  /* More compact on small screens */
-  .video-wrapper {
-    padding-bottom: 133.33%; /* 3:4 aspect ratio for very small screens */
-  }
-}
-
-/* Ensure videos are touch-friendly on mobile */
-@media (hover: none) and (pointer: coarse) {
-  .instagram-overlay-link {
-    opacity: 1;
-    bottom: 65px;
-  }
-  
-  .carousel-video {
-    /* Ensure native video controls work well on touch devices */
-    pointer-events: auto;
-  }
 }
 
 /* UPDATED CONTACT SECTION - WHITE BACKGROUND */
