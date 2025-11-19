@@ -871,111 +871,181 @@ h3.section-subheading,
   margin-bottom: 0;
 }
 
-/* CURATOR FEED STYLING */
-.curator-feed-wrapper {
-  background: transparent;
-  padding: 20px;
-  width: 100%;
-  max-width: 1200px;
+/* INSTAGRAM CAROUSEL STYLING - VIDEO VERSION */
+.instagram-carousel {
+  position: relative;
+  max-width: 900px;
   margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.carousel-container {
+  overflow: hidden;
+  flex: 1;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  background: #000;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide {
+  min-width: 100%;
+  flex-shrink: 0;
+  background: #000;
+}
+
+/* Video wrapper for proper aspect ratio */
+.video-wrapper {
   position: relative;
+  width: 100%;
+  padding-bottom: 177.78%; /* 9:16 aspect ratio for vertical Instagram videos */
+  background: #000;
+  overflow: hidden;
+}
+
+.carousel-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Ensures entire video is visible */
+  background: #000;
+  border-radius: 8px;
+}
+
+/* Video controls styling */
+.carousel-video::-webkit-media-controls-panel {
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+}
+
+/* Instagram overlay link */
+.instagram-overlay-link {
+  position: absolute;
+  bottom: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(22, 23, 143, 0.9);
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-family: "League Spartan", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  opacity: 0;
+  transition: opacity 0.3s ease;
   z-index: 10;
+  pointer-events: auto;
 }
 
-#curator-feed-default-feed-layout {
-  width: 100% !important;
-  min-height: 400px;
-  background: transparent !important;
-  position: relative;
-  z-index: 10;
-  overflow: visible !important;
+.video-wrapper:hover .instagram-overlay-link {
+  opacity: 1;
 }
 
-/* Ensure Curator.io feed fits well on all devices */
-.curator-feed-wrapper .crt-feed,
-.curator-feed-wrapper .crt-widget,
-#curator-feed-default-feed-layout * {
-  background: transparent !important;
-  max-width: 100% !important;
+.instagram-overlay-link:hover {
+  background: rgba(22, 23, 143, 1);
+  transform: translateX(-50%) translateY(-2px);
+  color: #fff;
 }
 
-/* Safari-specific fixes - iOS and Desktop */
-@supports (-webkit-appearance: none) {
-  .curator-feed-wrapper {
-    -webkit-transform: translateZ(0);
-    -webkit-backface-visibility: hidden;
-    -webkit-perspective: 1000;
-    transform: translateZ(0);
-  }
-  
-  #curator-feed-default-feed-layout {
-    -webkit-transform: translateZ(0);
-    -webkit-backface-visibility: hidden;
-    transform: translateZ(0);
-  }
+.carousel-arrow {
+  background: rgba(255, 255, 255, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  color: #fff;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+  backdrop-filter: blur(5px);
 }
 
-/* iOS Safari specific fixes */
-@supports (-webkit-touch-callout: none) {
-  #curator-feed-default-feed-layout {
-    -webkit-overflow-scrolling: touch;
-  }
-  
-  .curator-feed-wrapper {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-  }
+.carousel-arrow:hover {
+  background: rgba(255, 255, 255, 0.4);
+  border-color: rgba(255, 255, 255, 0.8);
+  transform: scale(1.1);
 }
 
-/* Mobile responsive adjustments for Curator feed */
+.carousel-arrow:active {
+  transform: scale(0.95);
+}
+
+.carousel-arrow span {
+  font-weight: bold;
+  line-height: 1;
+}
+
+/* Mobile responsive */
 @media screen and (max-width: 768px) {
-  .curator-feed-wrapper {
-    padding: 10px 5px;
+  .instagram-carousel {
+    gap: 10px;
     max-width: 100%;
   }
   
-  #curator-feed-default-feed-layout {
-    min-height: 300px;
-    width: 100% !important;
+  .carousel-arrow {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
   }
   
-  /* Ensure feed items don't overflow on mobile */
-  .curator-feed-wrapper .crt-post,
-  .curator-feed-wrapper .crt-grid-post {
-    max-width: 100% !important;
-    overflow: hidden !important;
+  .instagram-overlay-link {
+    font-size: 12px;
+    padding: 8px 16px;
+    bottom: 50px;
+  }
+  
+  /* Adjust video wrapper for mobile - slightly less tall */
+  .video-wrapper {
+    padding-bottom: 150%;
   }
 }
 
-/* Extra small mobile devices */
 @media screen and (max-width: 480px) {
-  .curator-feed-wrapper {
-    padding: 10px 0;
+  .instagram-carousel {
+    gap: 5px;
   }
   
-  #curator-feed-default-feed-layout {
-    min-height: 250px;
+  .carousel-arrow {
+    width: 35px;
+    height: 35px;
+    font-size: 18px;
+  }
+  
+  .instagram-overlay-link {
+    font-size: 11px;
+    padding: 6px 12px;
+    bottom: 45px;
+  }
+  
+  /* More compact on small screens */
+  .video-wrapper {
+    padding-bottom: 133.33%; /* 3:4 aspect ratio for very small screens */
   }
 }
 
-/* Ensure feed content is visible over dark background */
-#fh5co-events .curator-feed-wrapper,
-#fh5co-events .curator-feed-wrapper * {
-  position: relative;
-  z-index: 10;
-}
-
-/* Fix for any absolute positioned elements in feed */
-#curator-feed-default-feed-layout .crt-logo {
-  position: relative !important;
-}
-
-/* Ensure proper rendering on all devices */
-.curator-feed-wrapper img {
-  max-width: 100%;
-  height: auto;
-  -webkit-user-select: none;
-  user-select: none;
+/* Ensure videos are touch-friendly on mobile */
+@media (hover: none) and (pointer: coarse) {
+  .instagram-overlay-link {
+    opacity: 1;
+    bottom: 65px;
+  }
+  
+  .carousel-video {
+    /* Ensure native video controls work well on touch devices */
+    pointer-events: auto;
+  }
 }
 
 /* UPDATED CONTACT SECTION - WHITE BACKGROUND */
