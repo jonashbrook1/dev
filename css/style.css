@@ -768,6 +768,8 @@ h3.section-subheading,
   background-size: cover;
   background-position: center center;
   position: relative;
+  overflow: visible;
+  -webkit-overflow-scrolling: touch;
 }
 
 #fh5co-events > .fh5co-overlay {
@@ -778,11 +780,15 @@ h3.section-subheading,
   right: 0;
   background: rgba(0, 0, 0, 0.7);
   z-index: 9;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
 }
 
 #fh5co-events > .container {
   z-index: 10;
   position: relative;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
 }
 
 #fh5co-events .fh5co-heading .heading {
@@ -872,42 +878,104 @@ h3.section-subheading,
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
+  position: relative;
+  z-index: 10;
 }
 
 #curator-feed-default-feed-layout {
-  width: 100%;
+  width: 100% !important;
   min-height: 400px;
-  background: transparent;
+  background: transparent !important;
+  position: relative;
+  z-index: 10;
+  overflow: visible !important;
 }
 
 /* Ensure Curator.io feed fits well on all devices */
-.curator-feed-wrapper .crt-feed {
+.curator-feed-wrapper .crt-feed,
+.curator-feed-wrapper .crt-widget,
+#curator-feed-default-feed-layout * {
   background: transparent !important;
+  max-width: 100% !important;
+}
+
+/* Safari-specific fixes - iOS and Desktop */
+@supports (-webkit-appearance: none) {
+  .curator-feed-wrapper {
+    -webkit-transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    -webkit-perspective: 1000;
+    transform: translateZ(0);
+  }
+  
+  #curator-feed-default-feed-layout {
+    -webkit-transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    transform: translateZ(0);
+  }
+}
+
+/* iOS Safari specific fixes */
+@supports (-webkit-touch-callout: none) {
+  #curator-feed-default-feed-layout {
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .curator-feed-wrapper {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
 }
 
 /* Mobile responsive adjustments for Curator feed */
 @media screen and (max-width: 768px) {
   .curator-feed-wrapper {
-    padding: 10px;
+    padding: 10px 5px;
+    max-width: 100%;
   }
   
   #curator-feed-default-feed-layout {
     min-height: 300px;
+    width: 100% !important;
+  }
+  
+  /* Ensure feed items don't overflow on mobile */
+  .curator-feed-wrapper .crt-post,
+  .curator-feed-wrapper .crt-grid-post {
+    max-width: 100% !important;
+    overflow: hidden !important;
   }
 }
 
-/* Safari-specific fixes for Curator feed */
-@supports (-webkit-appearance: none) {
+/* Extra small mobile devices */
+@media screen and (max-width: 480px) {
   .curator-feed-wrapper {
-    -webkit-transform: translateZ(0);
-    transform: translateZ(0);
+    padding: 10px 0;
+  }
+  
+  #curator-feed-default-feed-layout {
+    min-height: 250px;
   }
 }
 
 /* Ensure feed content is visible over dark background */
+#fh5co-events .curator-feed-wrapper,
 #fh5co-events .curator-feed-wrapper * {
   position: relative;
   z-index: 10;
+}
+
+/* Fix for any absolute positioned elements in feed */
+#curator-feed-default-feed-layout .crt-logo {
+  position: relative !important;
+}
+
+/* Ensure proper rendering on all devices */
+.curator-feed-wrapper img {
+  max-width: 100%;
+  height: auto;
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 /* UPDATED CONTACT SECTION - WHITE BACKGROUND */
